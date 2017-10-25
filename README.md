@@ -1,4 +1,4 @@
-# LINE-TCR
+# TCR-KK
 Line Bot TCR
 
 Way Run bot without pc or of Android :
@@ -9,7 +9,7 @@ Way Run bot without pc or of Android :
 - pip2 install thrift==0.9.3
 - pkg install git
 - pkg install nano
-- git clone https://github.com/treerachai/LINE-TCR
+- git clone https://github.com/treerach/TCR-KK
 - cd Line-TCR
 - python2 line-tcr.py
 - Done
