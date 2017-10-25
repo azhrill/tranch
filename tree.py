@@ -1893,7 +1893,7 @@ def bot(op):
 
       #-------------Fungsi Balesan Respon Start---------------------#
             elif msg.text in ["Owner","own","admin","creator"]:
-                ki.sendText(msg.to,"Owner and Admin by line.me/ti/p/~bukanwota48")
+                ki.sendText(msg.to,"ucd886b532f581aa4de98af5898719392")
 
       #-------------Fungsi Balesan Respon Finish---------------------#
 
