@@ -10,6 +10,6 @@ Way Run bot without pc or of Android :
 - pkg install git
 - pkg install nano
 - git clone https://github.com/treerach/TCR-KK
-- cd Line-TCR
+- cd TCR-KK
 - python2 line-tcr.py
 - Done
