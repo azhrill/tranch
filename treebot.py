@@ -54,8 +54,8 @@ helpMessage ="""Ŧяәәƅoŧ v2.2
 ¤ Comment bl add
 ¤ Comment bl del
 ¤ Comment bl confirm
-¤ Ban
 ¤ Set [Show your Auto setting]
+¤ Ban
 ¤ Unban
 ¤ Banlist
 ¤ Check banlist
@@ -64,6 +64,7 @@ helpMessage ="""Ŧяәәƅoŧ v2.2
 ¤ Groups
 ¤ Cancel
 ¤ Clean
+¤ Speedbot
 ¤ Tagall [Mention All User]
 ¤ Invite [mid] [Invite by mid people]
 ¤ Gn "the group name"
@@ -1631,8 +1632,13 @@ def bot(op):
                 ki.sendText(msg.to,"K1")
                 kk.sendText(msg.to,"K2")
                 ks.sendText(msg.to,"K3")
-#-----------------------------------------------
-#-----------------------------------------------
+ #-------------Fungsi Speedbot Start---------------------#
+            elif msg.text in ["Speedbot","speedbot","Speed","Sp"]:
+                start = time.time()
+                cl.sendText(msg.to, "Waitting...")
+                elapsed_time = time.time() - start
+                cl.sendText(msg.to, "%sseconds" % (elapsed_time))
+#-------------Fungsi Speedbot Finish---------------------#
             elif "Ban " in msg.text:
                if msg.toType == 2:
                     if msg.from_ in admin:                                        
