@@ -1,7 +1,6 @@
-# TCR-KK
-Line Bot TCR
+# SelfBot
 
-Way Run bot without pc or of Android :
+Run bot without pc or of Android :
 - Download Termux & Install
 - pkg install python2
 - pip2 install rsa
@@ -9,7 +8,7 @@ Way Run bot without pc or of Android :
 - pip2 install thrift==0.9.3
 - pkg install git
 - pkg install nano
-- git clone https://github.com/treerach/TCR-KK
+- git clone https://github.com/treerach/SelfBot
 - cd TCR-KK
-- python2 line-tcr.py
+- python2 tree-tcr.py
 - Done
