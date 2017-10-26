@@ -10,5 +10,5 @@ Run bot without pc or of Android :
 - pip2 install requests
 - pkg install nano
 - cd SelfBot
-- python2 tree-tcr.py
+- python2 treebot.py
 - Done
