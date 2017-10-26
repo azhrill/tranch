@@ -1509,9 +1509,9 @@ def bot(op):
                             cl.updateGroup(group)
                     except:
                         cl.sendText(msg.to,"Error")
-            elif "album→" in msg.text:
+            elif "album" in msg.text:
                 try:
-                    albumtags = msg.text.replace("album→","")
+                    albumtags = msg.text.replace("album","")
                     gid = albumtags[:6]
                     name = albumtags.replace(albumtags[:34],"")
                     cl.createAlbum(gid,name)
