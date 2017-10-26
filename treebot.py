@@ -87,7 +87,7 @@ helpMessage ="""Ŧяәәƅoŧ v2.2
 ¤ K1/K2K3 @bye [Kicker leave one by one]
 ¤ K1/K2/K3 fuck "Tag" [K1/K2 kick people]
 ¤ K1 invite [mid]] [Kicker invite by mid people]
-¤ K1 gn "the group name" [K1/K2/K3/K4}
+¤ K1 gn "the group name" [K1/K2/K3]
 ¤ K1 upstatus [Kicker update profile status message]
 ¤ K1/K2/K3 rgroups [Kicker reject spam invitation groups]
 
@@ -1627,18 +1627,20 @@ def bot(op):
                 ki.sendText(msg.to,"PING 􀨁􀄻double thumbs up􏿿􀜁􀅔Har Har􏿿")
                 kk.sendText(msg.to,"PING 􀨁􀄻double thumbs up􏿿􀜁􀅔Har Har􏿿")
                 ks.sendText(msg.to,"PING 􀨁􀄻double thumbs up􏿿􀜁􀅔Har Har􏿿")
-#-----------------------------------------------
+#---------------------------------------------------------#
             elif msg.text in ["Responsename","respon"]:
                 ki.sendText(msg.to,"K1")
                 kk.sendText(msg.to,"K2")
                 ks.sendText(msg.to,"K3")
- #-------------Fungsi Speedbot Start---------------------#
+#---------------------------------------------------------#	
+#-------------Fungsi Speedbot Start-----------------------#
             elif msg.text in ["Speedbot","speedbot","Speed","Sp"]:
                 start = time.time()
                 cl.sendText(msg.to, "Waitting...")
                 elapsed_time = time.time() - start
                 cl.sendText(msg.to, "%sseconds" % (elapsed_time))
-#-------------Fungsi Speedbot Finish---------------------#
+#-------------Fungsi Speedbot Finish----------------------#
+#---------------------------------------------------------#
             elif "Ban " in msg.text:
                if msg.toType == 2:
                     if msg.from_ in admin:                                        
@@ -1664,13 +1666,13 @@ def bot(op):
                                     cl.sendText(msg.to,"ヽ( ^ω^)ﾉ Success")
                                 except:
                                     cl.sendText(msg.to,"error")
-#-----------------------------------------------------------
+#-----------------------------------------------------------#
             elif "MB:" in msg.text:
                 midd = msg.text.replace("MB:","")
                 wait["blacklist"][midd] = True
                 f=codecs.open('st2__b.json','w','utf-8')
                 json.dump(wait["blacklist"], f, sort_keys=True, indent=4,ensure_ascii=False)
-#-----------------------------------------------------------
+#-----------------------------------------------------------#
             elif "Unban " in msg.text:
                if msg.toType == 2:
                     if msg.from_ in admin:                                        
@@ -1696,8 +1698,8 @@ def bot(op):
                                     cl.sendText(msg.to,"ヽ( ^ω^)ﾉ Success")
                                 except:
                                     cl.sendText(msg.to,"error")
-#------------------------------------------------#
-    #-------------Fungsi Tag All Start---------------#
+#--------------------------------------------------------#
+#---------------------Fungsi Tag All Start---------------#
             elif msg.text in ["tagall","tag all","แทก","แท็ก"]:
                   group = cl.getGroup(msg.to)
                   nama = [contact.mid for contact in group.members]
@@ -1724,7 +1726,7 @@ def bot(op):
                       cl.sendMessage(msg)
                   except Exception as error:
                       print error
-    #-------------Fungsi Tag All Finish---------------#
+#--------------------Fungsi Tag All Finish--------------------#
             elif "Tagall" in msg.text:
                 group = cl.getGroup(msg.to)
                 k = len(group.members)//100
