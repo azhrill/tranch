@@ -11,31 +11,16 @@ import os.path,sys,urllib,shutil,subprocess
 cl = LINETCR.LINE()
 cl.login(qr=True)
 cl.loginResult()
-
-ki = LINETCR.LINE()
-ki.login(qr=True)
-ki.loginResult()
-
-kk = LINETCR.LINE()
-kk.login(qr=True)
-kk.loginResult()
-
-ks = LINETCR.LINE()
-ks.login(qr=True)
-ks.loginResult()
-
-kc = LINETCR.LINE()
-kc.login(qr=True)
-kc.loginResult()
-
-ka = LINETCR.LINE()
-ka.login(qr=True)
-ka.loginResult()
-
+ks = ki = kk = kc = ka = cl 
+print u"login success"
+reload(sys)
+sys.setdefaultencoding('utf-8')
+i = 0
+c_text = """this is autolike """
 print "login success"
 reload(sys)
 sys.setdefaultencoding('utf-8')
-helpMessage ="""Ŧяәәƅoŧ v2.1      
+helpMessage ="""Ŧяәәƅoŧ v2.3      
   
 ¤ Id  = [Check Account]
 ¤ Mid = [Check Accoun Mid]
