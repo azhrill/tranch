@@ -35,62 +35,62 @@ ka.loginResult()
 print "login success"
 reload(sys)
 sys.setdefaultencoding('utf-8')
-helpMessage ="""Tamii Bot v2.1      
+helpMessage ="""Ŧяәәƅoŧ v2.3      
   
-👊[Id]: ~÷~
-👊[Mid]: ~÷~
-👊[All mid]:
-👊[Me]: ~÷~
-👊[K1/K2/K3/]: "Contact"
-👊[K1/K2/K3 fuck:]: "Kick kicker"
-👊[Group Id]: "Id Me Group"
-👊[TL : "Text"]: "Auto status TL"
-👊[Clock :]: "Name Clock"
-👊[Up clock]: "Up date Clock"
-👊[Name : 'text']: "Name me"
-👊[MIC]: "mid"]: "Contact share"
-👊[Reject]: " invite"]: "Reject invite"
-👊[Massage add: "text"]: ~÷~
-👊[Add confirmasi]: ~÷~
-👊[Comment set : "Text"]: ~÷~
-👊[Comment check]: ~÷~
-👊[Clock: on]: "Clock name on"
-👊[Clock: off]: "Clock name off"
-👊[Ban]: "Add blacklist"
-👊[Unban]: "Dalate blacklist"
-👊[Banlist]: "Check blacklist"
+¤ Id  = [Check Account]
+¤ Mid = [Check Accoun Mid]
+¤ All mid = [Check AllbAccoun Mid]
+¤ Me = [Check Account Own]
+¤ K1/K2/K3/K4 = [Contact]
+¤ K1/K2/K3/K4 fuck: = [Kick kicker]
+¤ Group Id = [Id Me Group]
+¤ TL : "Text" = [Auto status TL]
+¤ Clock :  = [Name Clock]
+¤ Up clock = [Up date Clock]
+¤ Name : 'text' = "Name me"
+¤ MIC : "mid" = [Contact share]
+¤ Reject  : " invite" = [Reject invite]
+¤ Massage add: "text" = [Add Massage]
+¤ Add confirmasi = [Add Confirm ]
+¤ Comment set : "Text" = [Set text]
+¤ Comment check = [Check text]
+¤ Clock: on = [Clock name on]
+¤ Clock: off = [Clock name off]
+¤ Ban = [Add blacklist]
+¤ Unban = [Dalete blacklist]
+¤ Banlist = [Check blacklist]
 
--⚠™[ƧЄƬ]:ƇƠMMƛƝƊƧ ƧЄƬ. -
-👊[Contact: on/off]: 
-👊[Auto join: on/off]: 
-👊[Cancel Invite: 1 on/off]:
-👊[Auto share: on/off]:
-👊[Auto leave: on/off]: 
-👊[Comment: on/off]: 
-👊[Auto add: on/off]: 
-👊[Auto like: on/off]: 
+- Command Admin -
+¤ Contact: on/off 
+¤ Auto join: on/off 
+¤ Cancel Invite: 1 on/off
+¤ Auto share: on/off 
+¤ Auto leave: on/off
+¤ Comment: on/off
+¤ Auto add: on/off
+¤ Auto like: on/off
 	
--⚠™ƇƠMMƛƝƊƧ ƖƝ ƬHЄ ƓƦƠƲƤƧ. ~~~~
-👊[Ban " @Tag]: 
-👊[Unban " @Tag]: 
-👊[Urlon]: "Open urL"
-👊[Urloff]: "Closed urL"
-👊[Url]: " Check urL room"
-👊[Ginfo]: "~÷~ data room"
-👊[Invite: "mid"]: 
-👊[Say: "Text"]: "Kicker talk"
-👊[Cancel]: "Cancel invite"
-👊[Gn: "name"]: "Change name Group"
-👊[NK: "Name"]: ~÷~
-👊[Dead]: "Kick Blacklist"
+- Command Set ~~~~
+¤ Ban   =[Banned Target]
+¤ Unban =[Unbann Target]
+¤ Urlon  = [Open urL]
+¤ Urloff = [Closed urL]
+¤ Url = [Check urL room]
+¤ Ginfo = [data room]
+¤ Invite: "mid" =[Invite Via Mid]
+¤ Say: "Text" = [Kicker talk]
+¤ Cancel = [Cancel invite]
+¤ Gn: "name" = [Change name Group]
+¤ NK: "Name" =
+¤ Dead = "Kick Blacklist"
 
 """
-helpMessage2 ="""-⚠™ -
+helpMessage2 =""" Command Protect -
 
-👊[ƤƦƠƬЄƇƬ: ƠƝ/ƠƑƑ]: 
-👊[ƁԼƠƇƘ ƲƦԼ: ƠƝ/ƠƑƑ]: 
-👊[ƝƛMЄԼƠƇƘ: ƠƝ/ƠƑƑ]: 
-👊[ƁԼƠƇƘƖƝƔƖƬЄ: ƠƝ/ƠƑƑ]:  
+¤ Protect: on/off
+¤ Block url: on/off
+¤ Namelock: on/off
+¤ BlockInvite: on/off 
 	
 """
 KAC = [cl,ki,kk,ks,kc,ka]
@@ -100,7 +100,7 @@ kimid = kk.getProfile().mid
 ki2mid = ks.getProfile().mid
 Cmid = kc.getProfile().mid
 Emid = ka.getProfile().mid
-admin = ["ub736c5b1794f5aa30026d162d07ce5e6","u406133ad4d3fbe50a2f4d51ea081d050"]
+admin = ["u9489706a45fcf78bea076c6b77f7067d","ucd886b532f581aa4de98af5898719392"]
 me = cl.getProfile().mid
 bot1 = cl.getProfile().mid
 main = cl.getProfile().mid
@@ -113,12 +113,12 @@ autocancel = {}
 autoinvite = []
 autoleaveroom = []
 
-admins = ["ub736c5b1794f5aa30026d162d07ce5e6"]
-Rx5 = ["u406133ad4d3fbe50a2f4d51ea081d050"]
-Rx4 = ["u406133ad4d3fbe50a2f4d51ea081d050"]
-Rx3 = ["u406133ad4d3fbe50a2f4d51ea081d050"]
-Rx2 = ["ua51ba06b0dd18c0bfe2cc6caa3458202"]
-Rx1 = ["uc7f32bb28dc009916d40af87c9910ddc"]
+admins = ["u9489706a45fcf78bea076c6b77f7067d"]
+Rx5 = ["ucd886b532f581aa4de98af5898719392"]
+Rx4 = ["uac09b334047623bd3b38a544e55401ed"]
+Rx3 = ["u1be68271e244853d7f59ac795bc0af99"]
+Rx2 = ["uac09b334047623bd3b38a544e55401ed"]
+Rx1 = ["ucd886b532f581aa4de98af5898719392"]
 Administrator = admins + Rx5 + Rx4 + Rx3 + Rx2 + Rx1
 AS = Rx2 + Rx1 + Rx3 + Rx4 + Rx5
 adminsA = admins + Rx3 + Rx5
@@ -132,9 +132,9 @@ wait = {
     'leaveRoom':False,
     'timeline':False,
     'autoAdd':False,
-    'message':"Thanks add me😊😊😊",
+    'message':"Thanks add me",
     "lang":"JP",
-    "comment":"Auto like 👉Tamii👈",
+    "comment":"Auto like",
     "likeOn":False,
     "commentOn":False,
     "commentBlack":{},
