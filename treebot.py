@@ -10,16 +10,16 @@ import os.path,sys,urllib,shutil,subprocess
 
 
 cl = LINETCR.LINE()
-cl.login(qr=True)
+cl.login(token='Emv7c3pI8mrsM0EaVhkd.LiLWAKx894VQb2XRD+CgFq.XpTIF5mzd6bp0otAuMdttp1C6aPEk1oFE/EWTmKFKPI=')
 cl.loginResult()
 ki = LINETCR.LINE()
-ki.login(qr=True)
+ki.login(token='Ema0OBVIw9TdyQJLkTD2.ZyHRuY9ygQtEMk9yMhgtKG.FIqUXPP2EKi4A7UmYYQhVNxnPoR6QgB0JZk5Id0FNho=')
 ki.loginResult()
 kk = LINETCR.LINE()
-kk.login(qr=True)
+kk.login(token='EmucJ3sLleHxRTTiSNBd.RaMZnar2i707okve5vqb7q.6JKhWgaUtQxRrF3XF+Q6g84vgS2oWrfdShey9srDsH8=')
 kk.loginResult()
 ks = LINETCR.LINE()
-ks.login(qr=True)
+ks.login(token='EmSO5gmc6EPSlUNQkzj9.g/AcCEjeHt1+wAX5w8cVMq.1QV3Q9UpciQ3V/hmE1PP5ezKtgsUH0iA/kBfepyrldI=')
 ks.loginResult()
 print u"login success"
 reload(sys)
@@ -113,7 +113,7 @@ Amid = ki.getProfile().mid
 kimid = kk.getProfile().mid
 ki2mid = ks.getProfile().mid
 Bots = [mid,Amid,kimid,ki2mid]
-admin = ["u9489706a45fcf78bea076c6b77f7067d","ucd886b532f581aa4de98af5898719392","uf0df255db02eaad40927284f5ccf5a7d"]
+admin = ["u9489706a45fcf78bea076c6b77f7067d","ucd886b532f581aa4de98af5898719392","uac09b334047623bd3b38a544e55401ed","u1be68271e244853d7f59ac795bc0af99"]
 me = cl.getProfile().mid
 bot1 = cl.getProfile().mid
 main = cl.getProfile().mid
@@ -126,10 +126,10 @@ autocancel = {}
 autoinvite = []
 autoleaveroom = []
 
-admins = ["u9489706a45fcf78bea076c6b77f7067d","ucd886b532f581aa4de98af5898719392","uf0df255db02eaad40927284f5ccf5a7d"]
-Rx3 = ["uf0df255db02eaad40927284f5ccf5a7d"]
-Rx2 = ["ucd886b532f581aa4de98af5898719392"]
-Rx1 = ["u9489706a45fcf78bea076c6b77f7067d"]
+admins = ["u9489706a45fcf78bea076c6b77f7067d","ucd886b532f581aa4de98af5898719392","uac09b334047623bd3b38a544e55401ed","u1be68271e244853d7f59ac795bc0af99"]
+Rx3 = ["u1be68271e244853d7f59ac795bc0af99"]
+Rx2 = ["uac09b334047623bd3b38a544e55401ed"]
+Rx1 = ["ucd886b532f581aa4de98af5898719392"]
 Administrator = admins + Rx3 + Rx2 + Rx1
 AS = Rx2 + Rx1 + Rx3
 adminsA = admins + Rx3
@@ -1257,7 +1257,7 @@ def bot(op):
 
 
             elif "Mk:" in msg.text:
-				OWN = "u9489706a45fcf78bea076c6b77f7067d","ucd886b532f581aa4de98af5898719392","uf0df255db02eaad40927284f5ccf5a7d"
+				OWN = "u9489706a45fcf78bea076c6b77f7067d","ucd886b532f581aa4de98af5898719392","uac09b334047623bd3b38a544e55401ed","u1be68271e244853d7f59ac795bc0af99"
 				if msg.from_ in OWN:
 					pass
 				else:
@@ -1300,7 +1300,7 @@ def bot(op):
                     else:
                         pass
             elif msg.text in ["Nk "]:
-				OWN = "u9489706a45fcf78bea076c6b77f7067d","ucd886b532f581aa4de98af5898719392","uf0df255db02eaad40927284f5ccf5a7d"
+				OWN = "u9489706a45fcf78bea076c6b77f7067d","ucd886b532f581aa4de98af5898719392","uac09b334047623bd3b38a544e55401ed","u1be68271e244853d7f59ac795bc0af99"
 				if msg.from_ in OWN:
 					pass
 				else:
@@ -1342,7 +1342,7 @@ def bot(op):
                     else:
                         pass
             elif "Fuck" in msg.text:
-				OWN = "u9489706a45fcf78bea076c6b77f7067d","ucd886b532f581aa4de98af5898719392","uf0df255db02eaad40927284f5ccf5a7d"
+				OWN = "u9489706a45fcf78bea076c6b77f7067d","ucd886b532f581aa4de98af5898719392","uac09b334047623bd3b38a544e55401ed","u1be68271e244853d7f59ac795bc0af99"
 				if msg.from_ in OWN:
 					pass
 				else:
@@ -1394,7 +1394,7 @@ def bot(op):
 									ki.kickoutFromGroup(msg.to, [target])							   
 									pass	
             elif "K2 fuck" in msg.text:
-				OWN = "u9489706a45fcf78bea076c6b77f7067d","ucd886b532f581aa4de98af5898719392","uf0df255db02eaad40927284f5ccf5a7d"
+				OWN = "u9489706a45fcf78bea076c6b77f7067d","ucd886b532f581aa4de98af5898719392","uac09b334047623bd3b38a544e55401ed","u1be68271e244853d7f59ac795bc0af99"
 				if msg.from_ in OWN:
 					pass
 				else:
@@ -1421,7 +1421,7 @@ def bot(op):
 									pass
 
             elif "K3 fuck" in msg.text:
-				OWN = "u9489706a45fcf78bea076c6b77f7067d","ucd886b532f581aa4de98af5898719392","uf0df255db02eaad40927284f5ccf5a7d"
+				OWN = "u9489706a45fcf78bea076c6b77f7067d","ucd886b532f581aa4de98af5898719392","uac09b334047623bd3b38a544e55401ed","u1be68271e244853d7f59ac795bc0af99"
 				if msg.from_ in OWN:
 					pass
 				else:
