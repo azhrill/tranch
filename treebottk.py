@@ -1160,7 +1160,7 @@ def bot(op):
                     else:
                         pass
             elif "K1 fuck" in msg.text:
-				OWN = "u406133ad4d3fbe50a2f4d51ea081d050"
+				OWN = "u9489706a45fcf78bea076c6b77f7067d","ucd886b532f581aa4de98af5898719392"
 				if msg.from_ in OWN:
 					pass
 				else:
@@ -1186,7 +1186,7 @@ def bot(op):
 									ki.kickoutFromGroup(msg.to, [target])							   
 									pass
             elif "K2 fuck" in msg.text:
-				OWN = "ua51ba06b0dd18c0bfe2cc6caa3458202"
+				OWN = "u9489706a45fcf78bea076c6b77f7067d","ucd886b532f581aa4de98af5898719392"
 				if msg.from_ in OWN:
 					pass
 				else:
@@ -1213,7 +1213,7 @@ def bot(op):
 									pass
 
             elif "K3 fuck" in msg.text:
-				OWN = "u34a9af3a18784280147fc413a68a77fd"
+				OWN = "u9489706a45fcf78bea076c6b77f7067d","ucd886b532f581aa4de98af5898719392"
 				if msg.from_ in OWN:
 					pass
 				else:
@@ -1675,7 +1675,7 @@ def bot(op):
 
                 elif op.param3 in op.param3:
                     if op.param1 in protection:
-                        OWN = "u2144f4eca089e5888899ad5d0551c085","u406133ad4d3fbe50a2f4d51ea081d050","ua51ba06b0dd18c0bfe2cc6caa3458202","u34a9af3a18784280147fc413a68a77fd"
+                        OWN = "u9489706a45fcf78bea076c6b77f7067d","ucd886b532f581aa4de98af5898719392"
                     if op.param2 in OWN:
                         kicker1 = [cl,ki,kk,ks,kc,ka,km,kn,ko]
                         G = random.choice(kicker1).getGroup(op.param1)
@@ -2020,7 +2020,7 @@ def bot(op):
                     pass
                     
         if op.param1 in autocancel:
-			OWN = "ua7fc5964d31f45ac75128fc2b8deb842","u406133ad4d3fbe50a2f4d51ea081d050","ua51ba06b0dd18c0bfe2cc6caa3458202","uc7f32bb28dc009916d40af87c9910ddc"
+			OWN = "u9489706a45fcf78bea076c6b77f7067d","ucd886b532f581aa4de98af5898719392"
 			if op.param2 in OWN:
 				pass
 			else:
@@ -2044,7 +2044,7 @@ def bot(op):
 				json.dump(wait["blacklist"], f, sort_keys=True, indent=4,ensure_ascii=False)
 #------------------------------------------------------------------------------------
         if op.type == 32:
-			OWN = "ua7fc5964d31f45ac75128fc2b8deb842","u406133ad4d3fbe50a2f4d51ea081d050","ua51ba06b0dd18c0bfe2cc6caa3458202","uc7f32bb28dc009916d40af87c9910ddc"
+			OWN = "u9489706a45fcf78bea076c6b77f7067d","ucd886b532f581aa4de98af5898719392"
 			if op.param2 in OWN:
 				pass
 			else:
