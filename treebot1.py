@@ -126,7 +126,7 @@ autoleaveroom = []
 #AS = Rx2 + Rx1 + Rx3
 #adminsA = admins + Rx3
 
-omikuzi = ["大吉","中吉","小吉","末吉","大凶","凶"]
+#omikuzi = ["大吉","中吉","小吉","末吉","大凶","凶"]
 
 wait = {
     'contact':False,
