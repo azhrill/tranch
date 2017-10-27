@@ -10,22 +10,22 @@ import os.path,sys,urllib,shutil,subprocess
 
 
 cl = LINETCR.LINE()
-cl.login(qr=True)
+cl.login(token='Emv7c3pI8mrsM0EaVhkd.LiLWAKx894VQb2XRD+CgFq.XpTIF5mzd6bp0otAuMdttp1C6aPEk1oFE/EWTmKFKPI=')
 cl.loginResult()
 ki = LINETCR.LINE()
-ki.login(qr=True)
+ki.login(token='Ema0OBVIw9TdyQJLkTD2.ZyHRuY9ygQtEMk9yMhgtKG.FIqUXPP2EKi4A7UmYYQhVNxnPoR6QgB0JZk5Id0FNho=')
 ki.loginResult()
 kk = LINETCR.LINE()
-kk.login(qr=True)
+kk.login(token='EmucJ3sLleHxRTTiSNBd.RaMZnar2i707okve5vqb7q.6JKhWgaUtQxRrF3XF+Q6g84vgS2oWrfdShey9srDsH8=')
 kk.loginResult()
 ks = LINETCR.LINE()
-ks.login(qr=True)
+ks.login(token='EmSO5gmc6EPSlUNQkzj9.g/AcCEjeHt1+wAX5w8cVMq.1QV3Q9UpciQ3V/hmE1PP5ezKtgsUH0iA/kBfepyrldI=')
 ks.loginResult()
 print u"login success"
 reload(sys)
 sys.setdefaultencoding('utf-8')
 i = 0
-c_text = """autolike by Ŧяәәяɘɔɥɘı"""
+c_text = """this is autolike """
 
 helpMessage ="""Ŧяәәƅoŧ v2.2 
 			 
@@ -33,28 +33,28 @@ helpMessage ="""Ŧяәәƅoŧ v2.2
 ¤ Mid
 ¤ Me
 ¤ Tl "text"
-¤ Bye bye [You left the group]
+¤ Bye bye = You left the group
 ¤ Cn "text" 
 ¤ Gift 
-¤ Mc "mid" [convert mid to contact]
+¤ Mc "mid"  [convert mid to contact]
 ¤ Groups
-¤ Like:on/off [Autolike Post Timeline]
+¤ Like:on/off  [Auto like Post Timeline]
 ¤ album 
 ¤ album merit "id"
 ¤ album remove "id" [tact:on]
-¤ Rgroups [Reject spam invite groups]
+¤ Rgroups [Reject spam invitation groups]
 ¤ Auto add message "text"
 ¤ Auto add message confirm
 ¤ Clock:on/off
 ¤ Clock  "text"︎
 ¤ Update  [Update clock]
-¤ Update status [Update status message]
+¤ Update status [Update your profile status message]
 ¤ Comment confirm
 ¤ Comment "text"
 ¤ Comment bl add
 ¤ Comment bl del
 ¤ Comment bl confirm
-¤ Set [Show your setting]
+¤ Set [Show your Auto setting]
 ¤ Ban
 ¤ Unban
 ¤ Banlist
@@ -66,7 +66,7 @@ helpMessage ="""Ŧяәәƅoŧ v2.2
 ¤ Clean
 ¤ Speedbot
 ¤ Tagall [Mention All User]
-¤ Invite [mid] [Invite by mid]
+¤ Invite [mid] [Invite by mid people]
 ¤ Gn "the group name"
 ¤ Gurl
 ¤ gurl merit"the group ID"
@@ -80,16 +80,16 @@ helpMessage ="""Ŧяәәƅoŧ v2.2
   ¤¤ Command for kicker ¤¤
   
 ¤ Kicker  [All kicker join]
-¤ K1 gift [K1-3 if you have much kicker]
+¤ K1 gift [K1,k2,k3 if you have much kicker]
 ¤ K1/K2/K3 join [Kicker join one by one]
 ¤ K1 rename: "text"
 ¤ Bye  [All kicker Leave]
-¤ K1/K2/K3 @bye [Kicker one by one]
+¤ K1/K2K3 @bye [Kicker leave one by one]
 ¤ K1/K2/K3 fuck "Tag" [K1/K2 kick people]
 ¤ K1 invite [mid]] [Kicker invite by mid people]
 ¤ K1 gn "the group name" [K1/K2/K3]
-¤ K1 upstatus [Kicker update profile status]
-¤ K1/K2/K3 rgroups [Kicker reject spam invite groups]
+¤ K1 upstatus [Kicker update profile status message]
+¤ K1/K2/K3 rgroups [Kicker reject spam invitation groups]
 
   ¤¤ Auto Setting Command ¤¤
   
