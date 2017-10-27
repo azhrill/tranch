@@ -19,7 +19,7 @@ sys.setdefaultencoding('utf-8')
 i = 0
 c_text = """this is autolike """
 
-helpMessage ="""Ŧяәәƅoŧ v2.2 
+helpMessage ="""Ŧяәәƅoŧ v2.3 
 			 
 ¤ Id
 ¤ Mid
@@ -1719,7 +1719,7 @@ def bot(op):
                     txt = u''
                     s=0
                     d=[]
-                    for i in group.members[j*100 : (j+1)*100]:
+                    for i in group.members[j*400 : (j+1)*400]:
                         d.append({"S":str(s), "E" :str(s+8), "M":i.mid})
                         s += 9
                         txt += u'@Krampus\n'
@@ -3262,24 +3262,24 @@ def bot(op):
                     print e
                     pass
 					
-        if op.param1 in autocancel:
-			OWN = " " 
-			if op.param2 in OWN:
-				pass
-			else:
-				Inviter = op.param3.replace("",',')
-				InviterX = Inviter.split(",")
-				contact = cl.getContact(op.param2)
-				cl.cancelGroupInvitation(op.param1,InviterX)
-				ki.cancelGroupInvitation(op.param1,InviterX)
-				kk.cancelGroupInvitation(op.param1,InviterX)
-				ks.cancelGroupInvitation(op.param1,InviterX)
-				ki.kickoutFromGroup(op.param1,[op.param2])
-				kk.kickoutFromGroup(op.param1,[op.param2])
-				ks.kickoutFromGroup(op.param1,[op.param2])
-				wait["blacklist"][op.param2] = True
-				f=codecs.open('st2__b.json','w','utf-8')
-				json.dump(wait["blacklist"], f, sort_keys=True, indent=4,ensure_ascii=False)
+        #if op.param1 in autocancel:
+	#		OWN = " " 
+	#		if op.param2 in OWN:
+	#			pass
+	#		else:
+	#			Inviter = op.param3.replace("",',')
+	#			InviterX = Inviter.split(",")
+	#			contact = cl.getContact(op.param2)
+	#			cl.cancelGroupInvitation(op.param1,InviterX)
+	#			ki.cancelGroupInvitation(op.param1,InviterX)
+	#			kk.cancelGroupInvitation(op.param1,InviterX)
+	#			ks.cancelGroupInvitation(op.param1,InviterX)
+	#			ki.kickoutFromGroup(op.param1,[op.param2])
+	#			kk.kickoutFromGroup(op.param1,[op.param2])
+	#			ks.kickoutFromGroup(op.param1,[op.param2])
+	#			wait["blacklist"][op.param2] = True
+	#			f=codecs.open('st2__b.json','w','utf-8')
+	#			json.dump(wait["blacklist"], f, sort_keys=True, indent=4,ensure_ascii=False)
 #-----------------------------
         if op.type == 32:
 			OWN = " "
