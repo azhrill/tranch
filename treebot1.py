@@ -118,13 +118,13 @@ autocancel = {}
 autoinvite = []
 autoleaveroom = []
 
-admins = ["u9489706a45fcf78bea076c6b77f7067d","ucd886b532f581aa4de98af5898719392","uac09b334047623bd3b38a544e55401ed","u1be68271e244853d7f59ac795bc0af99"]
-Rx3 = ["u1be68271e244853d7f59ac795bc0af99"]
-Rx2 = ["uac09b334047623bd3b38a544e55401ed"]
-Rx1 = ["ucd886b532f581aa4de98af5898719392"]
-Administrator = admins + Rx3 + Rx2 + Rx1
-AS = Rx2 + Rx1 + Rx3
-adminsA = admins + Rx3
+#admins = ["u9489706a45fcf78bea076c6b77f7067d","ucd886b532f581aa4de98af5898719392","uac09b334047623bd3b38a544e55401ed","u1be68271e244853d7f59ac795bc0af99"]
+#Rx3 = ["u1be68271e244853d7f59ac795bc0af99"]
+#Rx2 = ["uac09b334047623bd3b38a544e55401ed"]
+#Rx1 = ["ucd886b532f581aa4de98af5898719392"]
+#Administrator = admins + Rx3 + Rx2 + Rx1
+#AS = Rx2 + Rx1 + Rx3
+#adminsA = admins + Rx3
 
 omikuzi = ["大吉","中吉","小吉","末吉","大凶","凶"]
 
