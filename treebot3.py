@@ -113,11 +113,11 @@ autocancel = {}
 autoinvite = []
 autoleaveroom = []
 
-admins = ["ub736c5b1794f5aa30026d162d07ce5e6"]
+admins = ["u9489706a45fcf78bea076c6b77f7067d"]
 Rx5 = ["ucd886b532f581aa4de98af5898719392"]
-Rx4 = ["ucd886b532f581aa4de98af5898719392"]
-Rx3 = ["ucd886b532f581aa4de98af5898719392"]
-Rx2 = ["ucd886b532f581aa4de98af5898719392"]
+Rx4 = ["uac09b334047623bd3b38a544e55401ed"]
+Rx3 = ["u1be68271e244853d7f59ac795bc0af99"]
+Rx2 = ["uac09b334047623bd3b38a544e55401ed"]
 Rx1 = ["ucd886b532f581aa4de98af5898719392"]
 Administrator = admins + Rx5 + Rx4 + Rx3 + Rx2 + Rx1
 AS = Rx2 + Rx1 + Rx3 + Rx4 + Rx5
