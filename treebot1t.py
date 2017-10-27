@@ -15,8 +15,6 @@ ks = ki = kk = kc = ka = cl
 print u"login success"
 reload(sys)
 sys.setdefaultencoding('utf-8')
-i = 0
-c_text = """this is autolike """
 print "login success"
 reload(sys)
 sys.setdefaultencoding('utf-8')
@@ -119,6 +117,7 @@ wait = {
     'autoAdd':False,
     'message':"Thanks add me ",
     "lang":"JP",
+    "comment":"Auto like",	
     "likeOn":False,
     "commentOn":False,
     "commentBlack":{},
