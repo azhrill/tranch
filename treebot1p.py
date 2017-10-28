@@ -19,7 +19,7 @@ sys.setdefaultencoding('utf-8')
 i = 0
 c_text = """this is autolike """
 
-helpMessage ="""Ŧяәәƅoŧ v2.3 
+helpMessage ="""Ŧяәәƅoŧ v2.4
 
 - Command Set ~~~~
 
