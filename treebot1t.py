@@ -30,11 +30,11 @@ helpMessage ="""Ŧяәәƅoŧ v2.5
 ¤ K1/K2/K3/K4 kick: [Kick kicker]
 ¤ Group Id [Id Me Group]
 ¤ TL : "Text" [Auto status TL]
-¤ Clock : [Name Clock]
+¤ Clock  [Name Clock]
 ¤ Up clock [Up date Clock]
 ¤ Name :'text'[Name me]
 ¤ MIC : "mid" [Contact share]
-¤ Reject  : " invite" [Reject invite]
+¤ Reject   " invite" [Reject invite]
 ¤ Massage add: "text" [Add Massage]
 ¤ Add confirmasi [Add Confirm ]
 ¤ Comment set : "Text" [Set text]
@@ -71,7 +71,7 @@ helpMessage ="""Ŧяәәƅoŧ v2.5
 ¤ Say: "Text" [Kicker talk]
 ¤ Cancel [Cancel invite]
 ¤ Gn: "name" [Change name Group]
-¤ NK: "Name" 
+¤ NK: "Name" [Kick target user]
 ¤ Dead [Kick Blacklist]
 
 """
