@@ -820,7 +820,7 @@ def bot(op):
                 else:
                     wait["leaveRoom"] = True
                     if wait["lang"] == "JP":
-                        cl.sendText(msg.to,"it was turned on"")
+                        cl.sendText(msg.to,"it was turned on")
                     else:
                         cl.sendText(msg.to,"turned on")
             elif msg.text in ["Auto leave:off"]:
