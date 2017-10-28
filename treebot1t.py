@@ -18,7 +18,7 @@ sys.setdefaultencoding('utf-8')
 print "login success"
 reload(sys)
 sys.setdefaultencoding('utf-8')
-helpMessage ="""Ŧяәәƅoŧ v2.4      
+helpMessage ="""Ŧяәәƅoŧ v2.5      
   
 ¤ Id  = [Check Account]
 ¤ Mid = [Check Accoun Mid]
@@ -37,6 +37,9 @@ helpMessage ="""Ŧяәәƅoŧ v2.4
 ¤ Add confirmasi = [Add Confirm ]
 ¤ Comment set : "Text" = [Set text]
 ¤ Comment check = [Check text]
+¤ Tagall = [Mention All User]
+¤ Set = [Show your Auto setting]
+¤ Speedbot = [Speedbot test]
 ¤ Clock: on = [Clock name on]
 ¤ Clock: off = [Clock name off]
 ¤ Ban = [Add blacklist]
@@ -571,9 +574,9 @@ def bot(op):
                     wait["commentOn"] = False
                     if wait["lang"] == "JP":
                         cl.sendText(msg.to,"Already。")          
-            #elif "gurl" == msg.text:
-                #print cl.getGroup(msg.to)
-                ##cl.sendMessage(msg)
+            elif "gurl" == msg.text:
+                print cl.getGroup(msg.to)
+                cl.sendMessage(msg)
             elif msg.text in ["Block url:on"]:
                 protecturl.append(msg.to)
                 cl.sendText(msg.to,"done")
@@ -889,7 +892,7 @@ def bot(op):
             elif msg.text in ["Auto like:on"]:
                 if wait["likeOn"] == True:
                     if wait["lang"] == "JP":
-                        cl.sendText(msg.to,"Done。")
+                        cl.sendText(msg.to,"done")
                 else:
                     wait["likeOn"] = True
                     if wait["lang"] == "JP":
@@ -897,36 +900,36 @@ def bot(op):
             elif msg.text in ["いいね:オフ","Auto like:off"]:
                 if wait["likeOn"] == False:
                     if wait["lang"] == "JP":
-                        cl.sendText(msg.to,"Done。")
+                        cl.sendText(msg.to,"done")
                 else:
                     wait["likeOn"] = False
                     if wait["lang"] == "JP":
-                        cl.sendText(msg.to,"Already。")
+                        cl.sendText(msg.to,"already")
 
             elif msg.text in ["Auto add:on"]:
                 if wait["autoAdd"] == True:
                     if wait["lang"] == "JP":
-                        cl.sendText(msg.to,"It's on already。")
+                        cl.sendText(msg.to,"It's on already")
                     else:
-                        cl.sendText(msg.to,"on already。")
+                        cl.sendText(msg.to,"on already")
                 else:
                     wait["autoAdd"] = True
                     if wait["lang"] == "JP":
-                        cl.sendText(msg.to,"It was turned on。")
+                        cl.sendText(msg.to,"It was turned on")
                     else:
-                        cl.sendText(msg.to,"Turned on。")
+                        cl.sendText(msg.to,"turned on")
             elif msg.text in ["Auto add:off"]:
                 if wait["autoAdd"] == False:
                     if wait["lang"] == "JP":
-                        cl.sendText(msg.to,"It's off already。")
+                        cl.sendText(msg.to,"it's off already")
                     else:
                         cl.sendText(msg.to,"off already。")
                 else:
                     wait["autoAdd"] = False
                     if wait["lang"] == "JP":
-                        cl.sendText(msg.to,"It was turned off。")
+                        cl.sendText(msg.to,"it was turned off")
                     else:
-                        cl.sendText(msg.to,"Turned off。")
+                        cl.sendText(msg.to,"turned off")
             elif "Massage add:" in msg.text:
                 wait["message"] = msg.text.replace("Massage add:","")
                 cl.sendText(msg.to,"The message was changed。")
@@ -1142,12 +1145,12 @@ def bot(op):
                            ki.kickoutFromGroup(msg.to,[target])
                     else:
                         pass
-            elif "K1 fuck" in msg.text:
+            elif "K1 kick" in msg.text:
 				OWN = "u9489706a45fcf78bea076c6b77f7067d","ucd886b532f581aa4de98af5898719392"
 				if msg.from_ in OWN:
 					pass
 				else:
-					nk0 = msg.text.replace("K1 fuck","")
+					nk0 = msg.text.replace("K1 kick","")
 					nk1 = nk0.lstrip()
 					nk2 = nk1.replace("@","")
 					nk3 = nk2.rstrip()
@@ -1168,12 +1171,12 @@ def bot(op):
 							except:
 									ki.kickoutFromGroup(msg.to, [target])							   
 									pass
-            elif "K2 fuck" in msg.text:
+            elif "K2 kick" in msg.text:
 				OWN = "u9489706a45fcf78bea076c6b77f7067d","ucd886b532f581aa4de98af5898719392"
 				if msg.from_ in OWN:
 					pass
 				else:
-					nk0 = msg.text.replace("K2 fuck","")
+					nk0 = msg.text.replace("K2 kick","")
 					nk1 = nk0.lstrip()
 					nk2 = nk1.replace("@","")
 					nk3 = nk2.rstrip()
@@ -1195,12 +1198,12 @@ def bot(op):
 									kk.kickoutFromGroup(msg.to, [target])							   
 									pass
 
-            elif "K3 fuck" in msg.text:
+            elif "K3 kick" in msg.text:
 				OWN = "u9489706a45fcf78bea076c6b77f7067d","ucd886b532f581aa4de98af5898719392"
 				if msg.from_ in OWN:
 					pass
 				else:
-					nk0 = msg.text.replace("K3 fuck","")
+					nk0 = msg.text.replace("K3 kick","")
 					nk1 = nk0.lstrip()
 					nk2 = nk1.replace("@","")
 					nk3 = nk2.rstrip()
@@ -1285,7 +1288,7 @@ def bot(op):
 #-----------------------------------------------------------
             elif "Protect:on" == msg.text:
 				if msg.to in protection:
-					cl.sendText(msg.to,"Already on")
+					cl.sendText(msg.to,"already on")
 				else:
 					wait["pnharfbot"][msg.to] = cl.getGroup(msg.to).name
 					f=codecs.open('pnharfbot.json','w','utf-8')
@@ -1296,24 +1299,24 @@ def bot(op):
 				try:
 					if msg.from_ in Administrator:
 						protection.remove(msg.to)
-						cl.sendText(msg.to,"Turn off")
+						cl.sendText(msg.to,"turn off")
 					else:
-						cl.sendText(msg.to,"Already off")
+						cl.sendText(msg.to,"already off")
 				except:
 					pass
             elif "Namelock:on" in msg.text:
                 if msg.to in wait['pname']:
-                    cl.sendText(msg.to,"Turn on.")
+                    cl.sendText(msg.to,"turn on.")
                 else:
-                    cl.sendText(msg.to,"Already on")
+                    cl.sendText(msg.to,"already on")
                     wait['pname'][msg.to] = True
                     wait['pro_name'][msg.to] = cl.getGroup(msg.to).name
             elif "Namelock:off" in msg.text:
                 if msg.to in wait['pname']:
-                    cl.sendText(msg.to,"Turn off.")
+                    cl.sendText(msg.to,"turn off.")
                     del wait['pname'][msg.to]
                 else:
-                    cl.sendText(msg.to,"Already off")
+                    cl.sendText(msg.to,"already off")
 					
             elif "Blockinvite:on" == msg.text:
 				gid = msg.to
@@ -1332,7 +1335,50 @@ def bot(op):
                     sys.exit()
                 except:
                     pass
-#-----------------------------------------------------------
+#---------------------Fungsi Tag All Start---------------#
+            elif msg.text in ["tagall","tag all","แทก","แท็ก"]:
+                  group = cl.getGroup(msg.to)
+                  nama = [contact.mid for contact in group.members]
+
+                  cb = ""
+                  cb2 = ""
+                  strt = int(0)
+                  akh = int(0)
+                  for md in nama:
+                      akh = akh + int(6)
+
+                      cb += """{"S":"""+json.dumps(str(strt))+""","E":"""+json.dumps(str(akh))+""","M":"""+json.dumps(md)+"},"""
+
+                      strt = strt + int(7)
+                      akh = akh + 1
+                      cb2 += "@nrik \n"
+
+                  cb = (cb[:int(len(cb)-1)])
+                  msg.contentType = 0
+                  msg.text = cb2
+                  msg.contentMetadata ={'MENTION':'{"MENTIONEES":['+cb+']}','EMTVER':'4'}
+
+                  try:
+                      cl.sendMessage(msg)
+                  except Exception as error:
+                      print error
+#--------------------Fungsi Tag All Finish-------------------------#
+            elif "Tagall" in msg.text:
+                group = cl.getGroup(msg.to)
+                k = len(group.members)//100
+                for j in xrange(k+1):
+                    msg = Message(to=msg.to)
+                    txt = u''
+                    s=0
+                    d=[]
+                    for i in group.members[j*400 : (j+1)*400]:
+                        d.append({"S":str(s), "E" :str(s+8), "M":i.mid})
+                        s += 9
+                        txt += u'@Krampus\n'
+                    msg.text = txt
+                    msg.contentMetadata = {u'MENTION':json.dumps({"MENTIONEES":d})}
+                    cl.sendMessage(msg) 
+#-------------------------------------------------------------------#				    
             elif "Spam @" in msg.text:
                 _name = msg.text.replace("Spam @","")
                 _nametarget = _name.rstrip(' ')
@@ -1483,23 +1529,23 @@ def bot(op):
                        ks.sendText(g.mid,"Ŧяәәƅoŧ  😂")
                        cl.sendText(msg.to, "Done spam 😂")
                        print "Done spam" 
-#-----------------------------------------------------------
+#------------------------------------------------------------#
             elif msg.text in ["PING","Ping","ping"]:
                 ki.sendText(msg.to,"PING 􀨁􀄻double thumbs up􏿿􀜁􀅔Har Har􏿿")
                 kk.sendText(msg.to,"PING 􀨁􀄻double thumbs up􏿿􀜁􀅔Har Har􏿿")
                 ks.sendText(msg.to,"PING 􀨁􀄻double thumbs up􏿿􀜁􀅔Har Har􏿿")
-#----------------------------------------------------------
+#------------------------------------------------------------#
             elif msg.text in ["Respon","respon","responsename"]:
-                cl.sendText(msg.to,"Ŧяәәƅoŧ v2.1")
+                cl.sendText(msg.to,"Ŧяәәƅoŧ v2.5")
                 ki.sendText(msg.to,"Ŧяәәƅoŧ 1")
                 kk.sendText(msg.to,"Ŧяәәƅoŧ 2")
                 ks.sendText(msg.to,"Ŧяәәƅoŧ 3")	
                 kc.sendText(msg.to,"Ŧяәәƅoŧ 4")
                 ka.sendText(msg.to,"Ŧяәәƅoŧ 5")
-#----------------------------------------------------------
+#-----------------------------------------------------------#
             elif msg.text == "Setlastpoint":
               if msg.from_ in admin:
-                cl.sendText(msg.to, "ƧЄƬ ƬHЄ ԼƛƧƬƧЄЄƝƧ' ƤƠƖƝƬ(｀・ω・´)")
+                cl.sendText(msg.to, "set the lastpoint(｀・ω・´)")
                 try:
                   del wait2['readPoint'][msg.to]
                   del wait2['readMember'][msg.to]
@@ -1525,7 +1571,7 @@ def bot(op):
 	            cl.sendText(msg.to, " %s\n\n\nPeople who have ignored reads\n(｀・ω・´)\n%s\n\nThese anu anu uesrs have seen at the lastseen point(｀・ω・´)\n[%s]"  % (wait2['readMember'][msg.to],chiya,setTime[msg.to]))
 	          else:
 	            cl.sendText(msg.to, "Sider ga bisa di read cek setpoint dulu bego tinggal ketik\nSetlastpoint\nkalo mau liat sider ketik\nViewlastseen")
-#-----------------------------------------------------------speed
+#------------------------------------------------------------#
             elif msg.text in ["Ban"]:
                 wait["wblacklist"] = True
                 cl.sendText(msg.to,"Please and The account registered with a blacklist。")
@@ -1611,7 +1657,7 @@ def bot(op):
                         cl.sendText(msg.to,str(e))
                     except:
                         pass                
-#-----------------------------------------------
+#-----------------------------------------------#
             elif "Say " in msg.text:
                 string = msg.text.replace("Say ","")
                 if len(string.decode('utf-8')) <= 50:
@@ -1620,16 +1666,16 @@ def bot(op):
                     ks.sendText(msg.to," " + string + " ")
                     kc.sendText(msg.to," " + string + " ")
                     ka.sendText(msg.to," " + string + " ")
-#-----------------------------------------------
+#-----------------------------------------------#
             elif "#test" in msg.text:
                 ks.sendText(msg.to,"ok")
-#-----------------------------------------------
-            elif "Speed" in msg.text:
+#-------------Fungsi Speedbot Start-----------------------#
+            elif msg.text in ["Speedbot","speedbot","Speed","Sp"]:
                 start = time.time()
-                cl.sendText(msg.to, "ƛƇƇЄƧƧ ƧƤЄЄƊ ƜƛƖƬƖƝƓ")
+                cl.sendText(msg.to, "Waitting...")
                 elapsed_time = time.time() - start
-                cl.sendText(msg.to, "%sseconds" % (elapsed_time))    
-#-----------------------------------------------             
+                cl.sendText(msg.to, "%sseconds" % (elapsed_time))
+#-------------Fungsi Speedbot Finish----------------------#      
         if op.type == 19:
             try:
                 if op.param3 in mid:
@@ -2112,7 +2158,7 @@ def nameUpdate():
             pass
 #----------------------------------------
 
-#-------------------------------
+#----------------------------------------
 thread2 = threading.Thread(target=nameUpdate)
 thread2.daemon = True
 thread2.start()
