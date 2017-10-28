@@ -22,33 +22,34 @@ helpMessage ="""Ŧяәәƅoŧ v2.5
 
 - Command ~~~~  
 
-¤ Id  = [Check Account]
-¤ Mid = [Check Accoun Mid]
-¤ All mid = [Check AllbAccoun Mid]
-¤ Me = [Check Account Own]
-¤ K1/K2/K3/K4 = [Contact]
-¤ K1/K2/K3/K4 kick: = [Kick kicker]
-¤ Group Id = [Id Me Group]
-¤ TL : "Text" = [Auto status TL]
-¤ Clock :  = [Name Clock]
-¤ Up clock = [Up date Clock]
-¤ Name : 'text' = "Name me"
-¤ MIC : "mid" = [Contact share]
-¤ Reject  : " invite" = [Reject invite]
-¤ Massage add: "text" = [Add Massage]
-¤ Add confirmasi = [Add Confirm ]
-¤ Comment set : "Text" = [Set text]
-¤ Comment check = [Check text]
-¤ Tagall = [Mention All User]
-¤ Set = [Show your Auto setting]
-¤ Speedbot = [Speedbot test]
-¤ Clock: on = [Clock name on]
-¤ Clock: off = [Clock name off]
-¤ Ban = [Add blacklist]
-¤ Unban = [Dalete blacklist]
-¤ Banlist = [Check blacklist]
+¤ Id  [Check Account]
+¤ Mid [Check Account Mid]
+¤ All mid [CheckAll Account Mid]
+¤ Me [Check Account Own]
+¤ K1/K2/K3/K4 [Contact]
+¤ K1/K2/K3/K4 kick: [Kick kicker]
+¤ Group Id [Id Me Group]
+¤ TL : "Text" [Auto status TL]
+¤ Clock : [Name Clock]
+¤ Up clock [Up date Clock]
+¤ Name :'text'[Name me]
+¤ MIC : "mid" [Contact share]
+¤ Reject  : " invite" [Reject invite]
+¤ Massage add: "text" [Add Massage]
+¤ Add confirmasi [Add Confirm ]
+¤ Comment set : "Text" [Set text]
+¤ Comment check [Check text]
+¤ Tagall [Mention All User]
+¤ Set [Show your Auto setting]
+¤ Speedbot [Test Speed]
+¤ Clock: on  [Clock name on]
+¤ Clock: off [Clock name off]
+¤ Ban  [Add blacklist]
+¤ Unban  [Dalete blacklist]
+¤ Banlist [Check blacklist]
 
 - Command Admin ~~~~
+
 ¤ Contact: on/off 
 ¤ Auto join: on/off 
 ¤ Cancel Invite: 1 on/off
@@ -60,18 +61,18 @@ helpMessage ="""Ŧяәәƅoŧ v2.5
 	
 - Command Set ~~~~
 
-¤ Ban   =[Banned Target]
-¤ Unban =[Unbann Target]
-¤ Urlon  = [Open urL]
-¤ Urloff = [Closed urL]
-¤ Url = [Check urL room]
-¤ Ginfo = [data room]
-¤ Invite: "mid" =[Invite Via Mid]
-¤ Say: "Text" = [Kicker talk]
-¤ Cancel = [Cancel invite]
-¤ Gn: "name" = [Change name Group]
-¤ NK: "Name" =
-¤ Dead = "Kick Blacklist"
+¤ Ban    [Banned Target]
+¤ Unban  [Unbann Target]
+¤ Urlon  [Open urL]
+¤ Urloff [Closed urL]
+¤ Url    [Check urL room]
+¤ Ginfo  [data room]
+¤ Invite: "mid" [Invite Via Mid]
+¤ Say: "Text" [Kicker talk]
+¤ Cancel [Cancel invite]
+¤ Gn: "name" [Change name Group]
+¤ NK: "Name" 
+¤ Dead [Kick Blacklist]
 
 """
 helpMessage2 =""" Command Protect -
