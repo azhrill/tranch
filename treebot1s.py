@@ -21,10 +21,10 @@ c_text = """this is autolike """
 
 helpMessage ="""Ŧяәәƅoŧ v2.4
 			 
-¤ Id
-¤ Mid
-¤ Me
-¤ Tl "text"
+¤ Id  [Check Account]
+¤ Mid [Check Account Mid]
+¤ Me  [Check Account Own]
+¤ Tl "text" [Auto status TL]
 ¤ Bye bye = [You left the group]
 ¤ Cn "text" 
 ¤ Gift 
@@ -37,7 +37,7 @@ helpMessage ="""Ŧяәәƅoŧ v2.4
 ¤ Rgroups [Reject spam invitation groups]
 ¤ Auto add message "text"
 ¤ Auto add message confirm
-¤ Clock:on/off
+¤ Clock:on/off [Clock name on/off]
 ¤ Clock  "text"︎
 ¤ Update  [Update clock]
 ¤ Update status [Update your profile status message]
@@ -47,16 +47,16 @@ helpMessage ="""Ŧяәәƅoŧ v2.4
 ¤ Comment bl del
 ¤ Comment bl confirm
 ¤ Set [Show your Auto setting]
-¤ Ban
-¤ Unban
-¤ Banlist
-¤ Check banlist
+¤ Ban [Add blacklist]
+¤ Unban [Del blacklist]
+¤ Banlist [blacklist]
+¤ Check banlist [Check blacklist]
 ¤ Check mbl
 ¤ Ginfo
 ¤ Groups
 ¤ Cancel
 ¤ Clean
-¤ Speedbot
+¤ Speedbot [Test Speed bot]
 ¤ Tagall [Mention All User]
 ¤ Invite [mid] [Invite by mid people]
 ¤ Gn "the group name"
