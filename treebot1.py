@@ -20,7 +20,9 @@ i = 0
 c_text = """this is autolike """
 
 helpMessage ="""Ŧяәәƅoŧ v2.3 
-			 
+
+- Command Set ~~~~
+
 ¤ Id
 ¤ Mid
 ¤ Me
