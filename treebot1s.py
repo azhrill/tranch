@@ -21,11 +21,11 @@ c_text = """this is autolike """
 
 helpMessage ="""Ŧяәәƅoŧ v2.4
 			 
-¤ Id  [Check Account]
-¤ Mid [Check Account Mid]
-¤ Me  [Check Account Own]
-¤ Tl "text" [Auto status TL]
-¤ Bye bye = [You left the group]
+¤ Id
+¤ Mid
+¤ Me
+¤ Tl "text"
+¤ Bye bye = You left the group
 ¤ Cn "text" 
 ¤ Gift 
 ¤ Mc "mid"  [convert mid to contact]
@@ -37,7 +37,7 @@ helpMessage ="""Ŧяәәƅoŧ v2.4
 ¤ Rgroups [Reject spam invitation groups]
 ¤ Auto add message "text"
 ¤ Auto add message confirm
-¤ Clock:on/off [Clock name on/off]
+¤ Clock:on/off
 ¤ Clock  "text"︎
 ¤ Update  [Update clock]
 ¤ Update status [Update your profile status message]
@@ -47,16 +47,16 @@ helpMessage ="""Ŧяәәƅoŧ v2.4
 ¤ Comment bl del
 ¤ Comment bl confirm
 ¤ Set [Show your Auto setting]
-¤ Ban [Add blacklist]
-¤ Unban [Del blacklist]
-¤ Banlist [blacklist]
-¤ Check banlist [Check blacklist]
+¤ Ban
+¤ Unban
+¤ Banlist
+¤ Check banlist
 ¤ Check mbl
 ¤ Ginfo
 ¤ Groups
 ¤ Cancel
 ¤ Clean
-¤ Speedbot [Test Speed bot]
+¤ Speedbot
 ¤ Tagall [Mention All User]
 ¤ Invite [mid] [Invite by mid people]
 ¤ Gn "the group name"
@@ -133,7 +133,7 @@ wait = {
     'autoJoin':True,
     'autoCancel':{"on":True,"members":1},
     'leaveRoom':True,
-    'timeline':True,
+    'timeline':False,
     'autoAdd':False,
     'message':"Thanks for add me",
     "lang":"JP",
@@ -146,7 +146,7 @@ wait = {
     "blacklist":{},
     "wblacklist":False,
     "dblacklist":False,
-    "pnharfbot":{},
+	"pnharfbot":{},
     "pname":{},
     "pro_name":{},
 	"posts":True,
@@ -1657,10 +1657,7 @@ def bot(op):
                                     json.dump(wait["blacklist"], f, sort_keys=True, indent=4,ensure_ascii=False)
                                     cl.sendText(msg.to,"ヽ( ^ω^)ﾉ Success")
                                 except:
-                
-		
-		
-		cl.sendText(msg.to,"error")
+                                    cl.sendText(msg.to,"error")
 #-----------------------------------------------------------#
             elif "MB:" in msg.text:
                 midd = msg.text.replace("MB:","")
@@ -1676,9 +1673,7 @@ def bot(op):
                        unb2 = unb1.replace("@","")
                        unb3 = unb2.rstrip()
                        x_name = unb3
-                
-		
-		gs = cl.getGroup(msg.to)
+                       gs = cl.getGroup(msg.to)
                        targets = []
                        for s in gs.members:
                            if x_name in s.displayName:
@@ -1687,8 +1682,7 @@ def bot(op):
                            cl.sendText(msg.to,"user does not exist")
                            pass
                        else:
-                   
-		for target in targets:
+                            for target in targets:
                                 try:
                                     del wait["blacklist"][target]
                                     f=codecs.open('st2__b.json','w','utf-8')
@@ -1696,7 +1690,8 @@ def bot(op):
                                     cl.sendText(msg.to,"ヽ( ^ω^)ﾉ Success")
                                 except:
                                     cl.sendText(msg.to,"error")
-#-----------------------Fungsi Tag All Start-------------------#
+#--------------------------------------------------------#
+#---------------------Fungsi Tag All Start---------------#
             elif msg.text in ["tagall","tag all","แทก","แท็ก"]:
                   group = cl.getGroup(msg.to)
                   nama = [contact.mid for contact in group.members]
@@ -1723,8 +1718,7 @@ def bot(op):
                       cl.sendMessage(msg)
                   except Exception as error:
                       print error
-#----------------------Fungsi Tag All Finish-----------------------#
-#------------------------------------------------------------------#
+#--------------------Fungsi Tag All Finish--------------------#
             elif "Tagall" in msg.text:
                 group = cl.getGroup(msg.to)
                 k = len(group.members)//100
