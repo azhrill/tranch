@@ -133,7 +133,7 @@ wait = {
     'autoJoin':True,
     'autoCancel':{"on":True,"members":1},
     'leaveRoom':True,
-    'timeline':False,
+    'timeline':True,
     'autoAdd':False,
     'message':"Thanks for add me",
     "lang":"JP",
