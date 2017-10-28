@@ -19,7 +19,9 @@ print "login success"
 reload(sys)
 sys.setdefaultencoding('utf-8')
 helpMessage ="""Ŧяәәƅoŧ v2.5      
-  
+
+- Command ~~~~  
+
 ¤ Id  = [Check Account]
 ¤ Mid = [Check Accoun Mid]
 ¤ All mid = [Check AllbAccoun Mid]
@@ -46,7 +48,7 @@ helpMessage ="""Ŧяәәƅoŧ v2.5
 ¤ Unban = [Dalete blacklist]
 ¤ Banlist = [Check blacklist]
 
-- Command Admin -
+- Command Admin ~~~~
 ¤ Contact: on/off 
 ¤ Auto join: on/off 
 ¤ Cancel Invite: 1 on/off
@@ -57,6 +59,7 @@ helpMessage ="""Ŧяәәƅoŧ v2.5
 ¤ Auto like: on/off
 	
 - Command Set ~~~~
+
 ¤ Ban   =[Banned Target]
 ¤ Unban =[Unbann Target]
 ¤ Urlon  = [Open urL]
