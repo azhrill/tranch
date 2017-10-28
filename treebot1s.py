@@ -146,7 +146,7 @@ wait = {
     "blacklist":{},
     "wblacklist":False,
     "dblacklist":False,
-	"pnharfbot":{},
+    "pnharfbot":{},
     "pname":{},
     "pro_name":{},
 	"posts":True,
