@@ -12,22 +12,14 @@ import os.path,sys,urllib,shutil,subprocess
 cl = LINETCR.LINE()
 cl.login(qr=True)
 cl.loginResult()
-ki = LINETCR.LINE()
-ki.login(qr=True)
-ki.loginResult()
-kk = LINETCR.LINE()
-kk.login(qr=True)
-kk.loginResult()
-ks = LINETCR.LINE()
-ks.login(qr=True)
-ks.loginResult()
+ks = ki = kk = kc = cl 
 print u"login success"
 reload(sys)
 sys.setdefaultencoding('utf-8')
 i = 0
 c_text = """this is autolike """
 
-helpMessage ="""Ŧяәәƅoŧ v2.2 
+helpMessage ="""Ŧяәәƅoŧ v2.4
 			 
 ¤ Id
 ¤ Mid
@@ -85,7 +77,7 @@ helpMessage ="""Ŧяәәƅoŧ v2.2
 ¤ K1 rename: "text"
 ¤ Bye  [All kicker Leave]
 ¤ K1/K2K3 @bye [Kicker leave one by one]
-¤ K1/K2/K3 fuck "Tag" [K1/K2 kick people]
+¤ K1/K2/K3 kick "Tag" [K1/K2 kick people]
 ¤ K1 invite [mid]] [Kicker invite by mid people]
 ¤ K1 gn "the group name" [K1/K2/K3]
 ¤ K1 upstatus [Kicker update profile status message]
@@ -134,7 +126,7 @@ Administrator = admins + Rx3 + Rx2 + Rx1
 AS = Rx2 + Rx1 + Rx3
 adminsA = admins + Rx3
 
-omikuzi = ["大吉","中吉","小吉","末吉","大凶","凶"]
+omikuzi = ["¤","¤¤","¤¤¤","¤¤¤","¤¤","¤"]
 
 wait = {
     'contact':False,
@@ -177,7 +169,7 @@ res = {
 }
 
 
-def Cmd(string, commands): #/XXX, >XXX, ;XXX, ^XXX, %XXX, $XXX...
+def Cmd(string, commands): #"¤","¤¤","¤¤¤","¤¤¤","¤¤","¤"
     tex = [""]
     for texX in tex:
         for command in commands:
@@ -1341,12 +1333,12 @@ def bot(op):
                            ki.kickoutFromGroup(msg.to,[target])
                     else:
                         pass
-            elif "Fuck" in msg.text:
+            elif "kick" in msg.text:
 				OWN = "u9489706a45fcf78bea076c6b77f7067d","ucd886b532f581aa4de98af5898719392","uac09b334047623bd3b38a544e55401ed","u1be68271e244853d7f59ac795bc0af99"
 				if msg.from_ in OWN:
 					pass
 				else:
-					nk0 = msg.text.replace("Fuck","")
+					nk0 = msg.text.replace("kick","")
 					nk1 = nk0.lstrip()
 					nk2 = nk1.replace("@","")
 					nk3 = nk2.rstrip()
@@ -1367,12 +1359,12 @@ def bot(op):
 							except:
 									cl.kickoutFromGroup(msg.to, [target])							   
 									pass
-            elif "K1 fuck" in msg.text:
+            elif "K1 kick" in msg.text:
 				OWN = ""
 				if msg.from_ in OWN:
 					pass
 				else:
-					nk0 = msg.text.replace("K1 fuck","")
+					nk0 = msg.text.replace("K1 kick","")
 					nk1 = nk0.lstrip()
 					nk2 = nk1.replace("@","")
 					nk3 = nk2.rstrip()
@@ -1393,12 +1385,12 @@ def bot(op):
 							except:
 									ki.kickoutFromGroup(msg.to, [target])							   
 									pass	
-            elif "K2 fuck" in msg.text:
+            elif "K2 kick" in msg.text:
 				OWN = "u9489706a45fcf78bea076c6b77f7067d","ucd886b532f581aa4de98af5898719392","uac09b334047623bd3b38a544e55401ed","u1be68271e244853d7f59ac795bc0af99"
 				if msg.from_ in OWN:
 					pass
 				else:
-					nk0 = msg.text.replace("K2 fuck","")
+					nk0 = msg.text.replace("K2 kick","")
 					nk1 = nk0.lstrip()
 					nk2 = nk1.replace("@","")
 					nk3 = nk2.rstrip()
@@ -1420,12 +1412,12 @@ def bot(op):
 									kk.kickoutFromGroup(msg.to, [target])							   
 									pass
 
-            elif "K3 fuck" in msg.text:
+            elif "K3 kick" in msg.text:
 				OWN = "u9489706a45fcf78bea076c6b77f7067d","ucd886b532f581aa4de98af5898719392","uac09b334047623bd3b38a544e55401ed","u1be68271e244853d7f59ac795bc0af99"
 				if msg.from_ in OWN:
 					pass
 				else:
-					nk0 = msg.text.replace("K3 fuck","")
+					nk0 = msg.text.replace("K3 kick","")
 					nk1 = nk0.lstrip()
 					nk2 = nk1.replace("@","")
 					nk3 = nk2.rstrip()
@@ -1447,7 +1439,7 @@ def bot(op):
 									ks.kickoutFromGroup(msg.to, [target])							   
 									pass
 									  
-#-------------------------------------------------------------------蹴り返し									  
+#-------------------------------------------------------------------									  
             elif msg.text in ["Ban"]:
                 wait["wblacklist"] = True
                 cl.sendText(msg.to,"send contact")
@@ -1585,7 +1577,7 @@ def bot(op):
 					pass
 
 #-----------------------------------------------
-            elif "#set" in msg.text:
+            elif "setlast" in msg.text:
 				cl.sendText(msg.to, "Let's see who lazy to type")
 				try:
 					del wait2['readPoint'][msg.to]
@@ -1597,7 +1589,7 @@ def bot(op):
 				wait2['setTime'][msg.to] = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
 				wait2['ROM'][msg.to] = {}
 				print wait2
-            elif "#read" in msg.text:
+            elif "read" in msg.text:
 				if msg.to in wait2['readPoint']:
 					if wait2["ROM"][msg.to].items() == []:
 						chiya = ""
@@ -1617,11 +1609,11 @@ def bot(op):
 				kk.sendText(msg.to,(bctxt))
 				ks.sendText(msg.to,(bctxt))
             elif msg.text in ["Salam1"]:
-                ki.sendText(msg.to,"السَّلاَمُ عَلَيْكُمْ وَرَحْمَةُ اللهِ وَبَرَكَاتُهُ")
-                kk.sendText(msg.to,"Assalamu'alaikum")
+                ki.sendText(msg.to," ")
+                kk.sendText(msg.to," ")
             elif msg.text in ["Salam2"]:
-                ki.sendText(msg.to,"وَعَلَيْكُمْ السَّلاَمُ وَرَحْمَةُ اللهِوَبَرَكَاتُهُ")
-                kk.sendText(msg.to,"Wa'alaikumsallam.Wr,Wb")
+                ki.sendText(msg.to," ")
+                kk.sendText(msg.to," ")
 #-----------------------------------------------
             elif msg.text in ["PING","Ping","ping"]:
                 ki.sendText(msg.to,"PING 􀨁􀄻double thumbs up􏿿􀜁􀅔Har Har􏿿")
@@ -1632,7 +1624,7 @@ def bot(op):
                 ki.sendText(msg.to,"K1")
                 kk.sendText(msg.to,"K2")
                 ks.sendText(msg.to,"K3")
-#---------------------------------------------------------#	
+		
 #-------------Fungsi Speedbot Start-----------------------#
             elif msg.text in ["Speedbot","speedbot","Speed","Sp"]:
                 start = time.time()
@@ -1640,7 +1632,7 @@ def bot(op):
                 elapsed_time = time.time() - start
                 cl.sendText(msg.to, "%sseconds" % (elapsed_time))
 #-------------Fungsi Speedbot Finish----------------------#
-#---------------------------------------------------------#
+
             elif "Ban " in msg.text:
                if msg.toType == 2:
                     if msg.from_ in admin:                                        
@@ -1735,7 +1727,7 @@ def bot(op):
                     txt = u''
                     s=0
                     d=[]
-                    for i in group.members[j*100 : (j+1)*100]:
+                    for i in group.members[j*500 : (j+1)*500]:
                         d.append({"S":str(s), "E" :str(s+8), "M":i.mid})
                         s += 9
                         txt += u'@Krampus\n'
