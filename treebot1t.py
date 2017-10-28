@@ -113,7 +113,7 @@ Administrator = admins + Rx5 + Rx4 + Rx3 + Rx2 + Rx1
 AS = Rx2 + Rx1 + Rx3 + Rx4 + Rx5
 adminsA = admins + Rx3 + Rx5
 
-omikuzi = ["大吉","中吉","小吉","末吉","大凶","凶"]
+Omikuji = ["Straight","Medium","Koshichi","Last term","Bad fate","fierce"]
 
 wait = {
     'contact':False,
@@ -577,7 +577,7 @@ def bot(op):
                 else:
                     wait["commentOn"] = False
                     if wait["lang"] == "JP":
-                        cl.sendText(msg.to,"Already。")          
+                        cl.sendText(msg.to,"already")          
             elif "gurl" == msg.text:
                 print cl.getGroup(msg.to)
                 cl.sendMessage(msg)
@@ -634,7 +634,7 @@ def bot(op):
                             u = "refusal"
                         else:
                             u = "許可"
-                        cl.sendText(msg.to,"[ƓƦƠƲƤ]\n" + str(ginfo.name) + "\n\n[ƓƖƊ]\n" + msg.to + "\n\n[ƓƦƠƲƤ ƇƦЄƛƬƠƦ]\n" + gCreator + "\n\n[ƤƦƠƑƖԼ ƓƦƠƲƤ]\nhttp://dl.profile.line.naver.jp/" + ginfo.pictureStatus + "\n\nMЄMƁЄƦ:" + str(len(ginfo.members)) + "Person\nƖƝƔƖƬЄ:" + sinvitee + "Person\nƖƝƔƖƬƛƬƖƠƝ ƲƦԼ:" + u + "ƖƬ'Ƨ ƬHЄ ƖƝƧƖƊЄ.")
+                        cl.sendText(msg.to,"[Group]\n" + str(ginfo.name) + "\n\n[gid]\n" + msg.to + "\n\n[Group Creator]\n" + gCreator + "\n\n[Profile Group]\nhttp://dl.profile.line.naver.jp/" + ginfo.pictureStatus + "\n\nMember:" + str(len(ginfo.members)) + "Person\nInvite:" + sinvitee + "Person\nInvitation URL:" + u + "It's The Inside.")
                     else:
                         cl.sendText(msg.to,"[名字]\n" + str(ginfo.name) + "\n[gid]\n" + msg.to + "\n[小组的作成者]\n" + gCreator + "\n[小组图标]\nhttp://dl.profile.line.naver.jp/" + ginfo.pictureStatus)
                 else:
@@ -1286,9 +1286,9 @@ def bot(op):
                                     del wait["blacklist"][target]
                                     f=codecs.open('st2__b.json','w','utf-8')
                                     json.dump(wait["blacklist"], f, sort_keys=True, indent=4,ensure_ascii=False)
-                                    cl.sendText(msg.to,"ヽ( ^ω^)ﾉ ƧƲƇƇЄƧƧ")
+                                    cl.sendText(msg.to,"ヽ( ^ω^)ﾉ Success")
                                 except:
-                                    cl.sendText(msg.to,"ヽ( ^ω^)ﾉ ƧƲƇƇЄƧƧ")
+                                    cl.sendText(msg.to,"ヽ( ^ω^)ﾉ Success")
 #-----------------------------------------------------------
             elif "Protect:on" == msg.text:
 				if msg.to in protection:
@@ -1640,7 +1640,7 @@ def bot(op):
                             group.name = name
                             cl.updateGroup(group)
                     except:
-                        cl.sendText(msg.to,"ЄƦƦƠƦ")
+                        cl.sendText(msg.to,"error")
             elif "Album making" in msg.text:
                 try:
                     albumtags = msg.text.replace("Album making","")
