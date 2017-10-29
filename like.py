@@ -54,8 +54,8 @@ adminsA = admins + Rx3
 wait = {
     'contact':False,
     'autoJoin':True,
-    'autoCancel':{"on":True,"members":1},
-    'leaveRoom':True,
+    'autoCancel':{"on":False,"members":1},
+    'leaveRoom':False,
     'timeline':False,
     'autoAdd':False,
     'message':"Thanks for add me",
