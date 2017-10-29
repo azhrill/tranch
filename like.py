@@ -31,7 +31,7 @@ wait = {
     'contact':True,
     'autoJoin':True,
     'autoCancel':{"on":False,"members":1},
-    'leaveRoom'True,
+    'leaveRoom':True,
     'timeline':True,
     'autoAdd':True,
     'message':"Thanks for add me",
