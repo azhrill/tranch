@@ -41,15 +41,6 @@ autocancel = {}
 autoinvite = []
 autoleaveroom = []
 
-admins = ["u9489706a45fcf78bea076c6b77f7067d","ucd886b532f581aa4de98af5898719392"]
-Rx3 = ["u1be68271e244853d7f59ac795bc0af99"]
-Rx2 = ["uac09b334047623bd3b38a544e55401ed"]
-Rx1 = ["ucd886b532f581aa4de98af5898719392"]
-Administrator = admins + Rx3 + Rx2 + Rx1
-AS = Rx2 + Rx1 + Rx3
-adminsA = admins + Rx3
-
-#omikuzi = ["大吉","中吉","小吉","末吉","大凶","凶"]
 
 wait = {
     'contact':True,
@@ -120,7 +111,7 @@ def autolike(op):
     except Exception as e:
             print e
 		
-	#-------------------------[Jangan Dihapus]------------------------#
+#--------------------------------------------------------#
 
 def bot(op):
     try:
@@ -151,7 +142,7 @@ def bot(op):
                         X.preventJoinByTicket = False
                         kk.updateGroup(X)
                         Ti = kk.reissueGroupTicket(op.param1)
-                        ki.acceptGroupInvitationByTicket(op.param1,Ti)
+                        ki.acceptGroupInvitationByTicket(op.param1,Ticket)
                         X.preventJoinByTicket = True
                         kk.updateGroup(X)
                         Ti = kk.reissueGroupTicket(op.param1)
@@ -162,7 +153,7 @@ def bot(op):
                         X.preventJoinByTicket = False
                         kc.updateGroup(X)
                         Ti = kc.reissueGroupTicket(op.param1)
-                        kk.acceptGroupInvitationByTicket(op.param1,Ti)
+                        kk.acceptGroupInvitationByTicket(op.param1,Ticket)
                         X.preventJoinByTicket = True
                         kc.updateGroup(X)
                         Ti = kc.reissueGroupTicket(op.param1)
@@ -173,19 +164,21 @@ def bot(op):
                         X.preventJoinByTicket = False
                         cl.updateGroup(X)
                         Ti = cl.reissueGroupTicket(op.param1)
-                        kc.acceptGroupInvitationByTicket(op.param1,Ti)
+                        kc.acceptGroupInvitationByTicket(op.param1,Ticket)
                         X.preventJoinByTicket = True
                         cl.updateGroup(X)
                         Ti = cl.reissueGroupTicket(op.param1)
 
-#----------------------[Masukin Semua SC Yang Ente Pengen Disini]----------------------#
+#--------------------------------------------------------#
+
         if op.type == 25:
             msg = op.message
             if msg.text in ["Speed","speed"]:
                     start = time.time()
                     elapsed_time = time.time() - start
                     cl.sendText(msg.to, "%sseconds" % (elapsed_time))
-#----------------------[Masukin Semua SC Yang Ente Pengen Disini]----------------------#
+#--------------------------------------------------------#
+
 
         if op.type == 59:
             print op
@@ -214,5 +207,5 @@ while True:
             cl.Poll.rev = max(cl.Poll.rev, Op.revision)
             bot(Op)
             
-#-------------------------[Jangan Dihapus]------------------------#       	
+#--------------------------------------------------------#  	
 		
