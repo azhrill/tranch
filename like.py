@@ -24,8 +24,8 @@ mid = cl.getProfile().mid
 Amid = ki.getProfile().mid
 kimid = kk.getProfile().mid
 ki2mid = ks.getProfile().mid
-Bots = [mid,Amid,kimid,ki2mid]
 
+Bots = [mid,Amid,kimid,ki2mid]
 admin = ["u9489706a45fcf78bea076c6b77f7067d","ucd886b532f581aa4de98af5898719392"]
 wait = {
     'contact':True,
