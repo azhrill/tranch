@@ -25,28 +25,28 @@ helpMessage ="""Ŧяәәƅoŧ v2.4
 ¤ Mid
 ¤ Me
 ¤ Tl "text"
-¤ Bye bye = You left the group
+¤ Bye bye 
 ¤ Cn "text" 
 ¤ Gift 
-¤ Mc "mid"  [convert mid to contact]
+¤ Mc "mid" 
 ¤ Groups
-¤ Like:on/off  [Auto like Post Timeline]
+¤ Like:on/off 
 ¤ album 
 ¤ album merit "id"
-¤ album remove "id" [tact:on]
-¤ Rgroups [Reject spam invitation groups]
+¤ album remove "id" 
+¤ Rgroups 
 ¤ Auto add message "text"
 ¤ Auto add message confirm
 ¤ Clock:on/off
 ¤ Clock  "text"︎
-¤ Update  [Update clock]
-¤ Update status [Update your profile status message]
+¤ Update  
+¤ Update status 
 ¤ Comment confirm
 ¤ Comment "text"
 ¤ Comment bl add
 ¤ Comment bl del
 ¤ Comment bl confirm
-¤ Set [Show your Auto setting]
+¤ Set 
 ¤ Ban
 ¤ Unban
 ¤ Banlist
@@ -57,8 +57,8 @@ helpMessage ="""Ŧяәәƅoŧ v2.4
 ¤ Cancel
 ¤ Clean
 ¤ Speedbot
-¤ Tagall [Mention All User]
-¤ Invite [mid] [Invite by mid people]
+¤ Tagall 
+¤ Invite 
 ¤ Gn "the group name"
 ¤ Gurl
 ¤ gurl merit"the group ID"
@@ -133,7 +133,7 @@ wait = {
     'autoJoin':True,
     'autoCancel':{"on":True,"members":1},
     'leaveRoom':True,
-    'timeline':False,
+    'timeline':True,
     'autoAdd':False,
     'message':"Thanks for add me",
     "lang":"JP",
