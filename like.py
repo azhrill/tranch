@@ -2,42 +2,39 @@
 
 import LINETCR
 from LINETCR.lib.curve.ttypes import *
-from io import StringIO
 from datetime import datetime
-import time,random,sys,json,codecs,threading,glob,sys
-import re,string,os
-import os.path,sys,urllib,shutil,subprocess
+import time,random,sys,json,codecs,threading,glob,re,base64
 
 cl = LINETCR.LINE()
 cl.login(qr=True)
 cl.loginResult()
-
-ki = kk = kc = cl 
-
-print "login success"
+ks = ki = kk = kc = cl 
+print u"login success"
 reload(sys)
 sys.setdefaultencoding('utf-8')
+i = 0
+c_text = """this is autolike """
 
-KAC=[cl,ki,kk,kc]
+KAC=[cl,ki,kk,kc,ks]
 mid = cl.getProfile().mid
 Amid = ki.getProfile().mid
 Bmid = kk.getProfile().mid
 Cmid = kc.getProfile().mid
+Dmid = ks.getProfile().mid
 
-Bots=[mid,Amid,Bmid,Cmid]
+Bots=[mid,Amid,Bmid,Cmid,Dmid]
 admin=["u9489706a45fcf78bea076c6b77f7067d","ucd886b532f581aa4de98af5898719392"]
-creator=["ucd886b532f581aa4de98af5898719392]
 wait = {
-    'contact':False,
+    'contact':True,
     'autoJoin':True,
     'autoCancel':{"on":True,"members":1},
     'leaveRoom':True,
-    'timeline':False,
+    'timeline':True,
     'autoAdd':True,
-    'message':"Owner : line://ti/p/~tobyg74",
+    'message':"Thanks for add me",
     "lang":"JP",
-    "comment":"Owner : line://ti/p/~tobyg74",
-    "commentOn":True,
+    "comment":"Thanks for add me",
+    "commentOn":False,
     "commentBlack":{},
     "wblack":False,
     "dblack":False,
@@ -45,10 +42,8 @@ wait = {
     "blacklist":{},
     "wblacklist":False,
     "dblacklist":False,
-    "Protectguest":False,
-    "Protectcancel":False,
     "protectionOn":True,
-    "atjointicket":True
+    "atjointicket":False
     }
 
 wait2 = {
@@ -56,13 +51,6 @@ wait2 = {
     'readMember':{},
     'setTime':{},
     'ROM':{}
-    }
-
-mimic = {
-    "copy":False,
-    "copy2":False,
-    "status":False,
-    "target":{}
     }
 
 setTime = {}
@@ -77,7 +65,27 @@ def sendMessage(to, text, contentMetadata={}, contentType=0):
     if to not in messageReq:
         messageReq[to] = -1
     messageReq[to] += 1
-#-----------------------------------------------
+
+#---------------------------[AutoLike-nya]---------------------------#
+def autolike():
+			for zx in range(0,20):
+				hasil = cl.activity(limit=20)
+				if hasil['result']['posts'][zx]['postInfo']['liked'] == False:
+					try:    
+						cl.like(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],likeType=1002)
+						cl.comment(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],"Auto Like")
+						kk.like(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],likeType=1002)
+						kk.comment(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],"Treerachai")
+						print "Like"
+					except:
+							pass
+				else:
+						print "Like"
+			time.sleep(500)
+thread2 = threading.Thread(target=autolike)
+thread2.daemon = True
+thread2.start()
+#---------------------------[AutoLike-nya]---------------------------#
 def NOTIFIED_READ_MESSAGE(op):
     try:
         if op.param1 in wait2['readPoint']:
@@ -92,7 +100,8 @@ def NOTIFIED_READ_MESSAGE(op):
     except:
         pass
 
-#-----------------------------------------------
+#-------------------------[Jangan Dihapus]------------------------#
+
 def bot(op):
     try:
         if op.type == 0:
@@ -104,93 +113,59 @@ def bot(op):
                     pass
                 else:
                     cl.sendText(op.param1,str(wait["message"]))
-#-----------------------------------------------
-            elif msg.contentType == 16:
-                if wait["timeline"] == True:
-                    msg.contentType = 0
-                    if wait["lang"] == "JP":
-                        msg.text = "post URL\n" + msg.contentMetadata["postEndUrl"]
-                    else:
-                        msg.text = "URLâ†’\n" + msg.contentMetadata["postEndUrl"]
-                    cl.sendText(msg.to,msg.text)
-            elif msg.text is None:
-                return
-#-----------------------------------------------
-            elif msg.text in ["Cancelall"]:
-				if msg.from_ in admin:
-					gid = cl.getGroupIdsInvited()
-					for i in gid:
-						cl.rejectGroupInvitation(i)
-					if wait["lang"] == "JP":
-						cl.sendText(msg.to,"All invitations have been refused")
-					else:
-		
-				cl.sendText(msg.to,"忙鈥光�櫭宦澝ぢ衡�犆モ�β┢捖♀�灻┾�氣偓猫炉路茫鈧��")
+        if op.type == 13:
+                if op.param3 in mid:
+                    if op.param2 in Amid:
+                        G = ki.getGroup(op.param1)
+                        G.preventJoinByTicket = False
+                        ki.updateGroup(G)
+                        Ticket = ki.reissueGroupTicket(op.param1)
+                        cl.acceptGroupInvitationByTicket(op.param1,Ticket)
+                        G.preventJoinByTicket = True
+                        ki.updateGroup(G)
+                        Ticket = ki.reissueGroupTicket(op.param1)
 
-#-----------------------------------------------
-            elif msg.text in ["Tagall"]:
-              if msg.from_ in admin:
-                group = cl.getGroup(msg.to)
-                nama = [contact.mid for contact in group.members]
-                cb = ""
-                cb2 = ""
-                strt = int(0)
-                akh = int(0)
-                for md in nama:
-                    akh = akh + int(5)
-                    cb += """{"S":"""+json.dumps(str(strt))+""","E":"""+json.dumps(str(akh))+""","M":"""+json.dumps(md)+"},"""
-                    strt = strt + int(6)
-                    akh = akh + 1
-                    cb2 += "@nrik\n"
-                cb = (cb[:int(len(cb)-1)])
-                msg.contentType = 0
-                msg.text = cb2
-                msg.contentMetadata ={'MENTION':'{"MENTIONEES":['+cb+']}','EMTVER':'4'}
-                try:
-                    ki.sendMessage(msg)
-                except Exception as error:
-                    print error
-#-----------------------------------------------
-            elif msg.text in ["Out","out"]:
-				if msg.from_ in admin:
-					if msg.toType == 2:
-						ginfo = cl.getGroup(msg.to)
-						try:
-							ki.leaveGroup(msg.to)
-							kk.leaveGroup(msg.to)
-							kc.leaveGroup(msg.to)
-						except:
-							pass
-#-----------------------------------------------
-            elif msg.text in ["Creator"]:
-					msg.contentType = 13
-					msg.contentMetadata = {'mid': "ua7fb5762d5066629323d113e1266e8ca"}
-					cl.sendMessage(msg)
-					
-#-----------------------------------------------
-            elif msg.text in ["Gcreator"]:
-              if msg.toType == 2:
-                    msg.contentType = 13
-                    ginfo = cl.getGroup(msg.to)
-                    gCreator = ginfo.creator.mid
-                    try:
-                        msg.contentMetadata = {'mid': gCreator}
-                        gCreator1 = ginfo.creator.displayName
-                        
-                    except:
-                        gCreator = "Error"
-                    cl.sendText(msg.to, "Group Creator : " + gCreator1)
-                    cl.sendMessage(msg)
-			
-#-----------------------------------------------
-            elif msg.text in ["Sp","Speed","speed"]:
-				if msg.from_ in admin:
-					start = time.time()
-					cl.sendText(msg.to, "Wait...")
-					elapsed_time = time.time() - start
-					cl.sendText(msg.to, "%sseconds" % (elapsed_time))
+                if op.param3 in Amid:
+                    if op.param2 in Bmid:
+                        X = kk.getGroup(op.param1)
+                        X.preventJoinByTicket = False
+                        kk.updateGroup(X)
+                        Ti = kk.reissueGroupTicket(op.param1)
+                        ki.acceptGroupInvitationByTicket(op.param1,Ti)
+                        X.preventJoinByTicket = True
+                        kk.updateGroup(X)
+                        Ti = kk.reissueGroupTicket(op.param1)
 
-#------------------------------------------------------------------
+                if op.param3 in Bmid:
+                    if op.param2 in Cmid:
+                        X = kc.getGroup(op.param1)
+                        X.preventJoinByTicket = False
+                        kc.updateGroup(X)
+                        Ti = kc.reissueGroupTicket(op.param1)
+                        kk.acceptGroupInvitationByTicket(op.param1,Ti)
+                        X.preventJoinByTicket = True
+                        kc.updateGroup(X)
+                        Ti = kc.reissueGroupTicket(op.param1)
+
+                if op.param3 in Cmid:
+                    if op.param2 in mid:
+                        X = cl.getGroup(op.param1)
+                        X.preventJoinByTicket = False
+                        cl.updateGroup(X)
+                        Ti = cl.reissueGroupTicket(op.param1)
+                        kc.acceptGroupInvitationByTicket(op.param1,Ti)
+                        X.preventJoinByTicket = True
+                        cl.updateGroup(X)
+                        Ti = cl.reissueGroupTicket(op.param1)
+
+#----------------------[Masukin Semua SC Yang Ente Pengen Disini]----------------------#
+        if op.type == 25:
+            msg = op.message
+            if msg.text in ["Speed","speed"]:
+                    start = time.time()
+                    elapsed_time = time.time() - start
+                    cl.sendText(msg.to, "%sseconds" % (elapsed_time))
+#----------------------[Masukin Semua SC Yang Ente Pengen Disini]----------------------#
 
         if op.type == 59:
             print op
@@ -207,42 +182,6 @@ def a2():
         return False
     else:
         return True
-def autolike():
-			for zx in range(0,20):
-				hasil = cl.activity(limit=20)
-				if hasil['result']['posts'][zx]['postInfo']['liked'] == False:
-					try:    
-						cl.like(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],likeType=1002)
-						cl.comment(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],"Auto Like By line:://ti/p/~tobyg74")
-						kk.like(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],likeType=1002)
-						kk.comment(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],"Channel Youtube : TobyGaming74")
-						print "Like"
-					except:
-							pass
-				else:
-						print "Like"
-			time.sleep(500)
-thread2 = threading.Thread(target=autolike)
-thread2.daemon = True
-thread2.start()
-
-def nameUpdate():
-    while True:
-        try:
-        #while a2():
-            #pass
-            if wait["clock"] == True:
-                now2 = datetime.now()
-                nowT = datetime.strftime(now2,"(%H:%M)")
-                profile = cl.getProfile()
-                profile.displayName = wait["cName"] + nowT
-                cl.updateProfile(profile)
-            time.sleep(600)
-        except:
-            pass
-thread2 = threading.Thread(target=nameUpdate)
-thread2.daemon = True
-thread2.start()
 
 while True:
     try:
@@ -254,3 +193,5 @@ while True:
         if (Op.type != OpType.END_OF_OPERATION):
             cl.Poll.rev = max(cl.Poll.rev, Op.revision)
             bot(Op)
+            
+#-------------------------[Jangan Dihapus]------------------------#            
