@@ -52,12 +52,12 @@ adminsA = admins + Rx3
 #omikuzi = ["大吉","中吉","小吉","末吉","大凶","凶"]
 
 wait = {
-    'contact':False,
+    'contact':True,
     'autoJoin':True,
     'autoCancel':{"on":False,"members":1},
-    'leaveRoom':False,
-    'timeline':False,
-    'autoAdd':False,
+    'leaveRoom'::True,
+    'timeline'::True,
+    'autoAdd'::True,
     'message':"Thanks for add me",
     "lang":"JP",
     "comment":"Thanks for add me",
@@ -69,11 +69,10 @@ wait = {
     "blacklist":{},
     "wblacklist":False,
     "dblacklist":False,
-	"pnharfbot":{},
-    "pname":{},
-    "pro_name":{},
-	"posts":True,
-	}
+    "protectionOn":True,
+    "atjointicket":False
+    }
+
 	
 wait2 = {
 	'readMember':{},
