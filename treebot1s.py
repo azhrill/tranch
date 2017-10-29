@@ -97,7 +97,7 @@ autocancel = {}
 autoinvite = []
 autoleaveroom = []
 
-admins = ["ub736c5b1794f5aa30026d162d07ce5e6"]
+admins = ["u9489706a45fcf78bea076c6b77f7067d"]
 Rx5 = ["ucd886b532f581aa4de98af5898719392"]
 Rx4 = ["ucd886b532f581aa4de98af5898719392"]
 Rx3 = ["ucd886b532f581aa4de98af5898719392"]
