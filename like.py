@@ -19,29 +19,14 @@ sys.setdefaultencoding('utf-8')
 i = 0
 c_text = """this is autolike """
 
-helpMessage ="""
-
-"""
 KAC = [cl,ki,kk,ks]
 mid = cl.getProfile().mid
 Amid = ki.getProfile().mid
 kimid = kk.getProfile().mid
 ki2mid = ks.getProfile().mid
 Bots = [mid,Amid,kimid,ki2mid]
+
 admin = ["u9489706a45fcf78bea076c6b77f7067d","ucd886b532f581aa4de98af5898719392"]
-me = cl.getProfile().mid
-bot1 = cl.getProfile().mid
-main = cl.getProfile().mid
-kicker1 = ki.getProfile().mid
-bots = me + kicker1
-protectname = []
-protecturl = []
-protection = []
-autocancel = {}
-autoinvite = []
-autoleaveroom = []
-
-
 wait = {
     'contact':True,
     'autoJoin':True,
