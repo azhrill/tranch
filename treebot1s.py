@@ -17,7 +17,7 @@ reload(sys)
 sys.setdefaultencoding('utf-8')
 i = 0
 c_text = """this is autolike """
-helpMessage ="""Ŧяәәƅoŧ v2.3      
+helpMessage ="""Ŧяәәƅoŧ v2.5      
   
 ¤ Id  = [Check Account]
 ¤ Mid = [Check Accoun Mid]
@@ -43,6 +43,7 @@ helpMessage ="""Ŧяәәƅoŧ v2.3
 ¤ Banlist = [Check blacklist]
 
 - Command Admin -
+
 ¤ Contact: on/off 
 ¤ Auto join: on/off 
 ¤ Cancel Invite: 1 on/off
@@ -53,6 +54,7 @@ helpMessage ="""Ŧяәәƅoŧ v2.3
 ¤ Auto like: on/off
 	
 - Command Set ~~~~
+
 ¤ Ban   =[Banned Target]
 ¤ Unban =[Unbann Target]
 ¤ Urlon  = [Open urL]
