@@ -12,8 +12,6 @@ ks = ki = kk = kc = cl
 print u"login success"
 reload(sys)
 sys.setdefaultencoding('utf-8')
-i = 0
-c_text = """this is autolike """
 
 KAC=[cl,ki,kk,kc,ks]
 mid = cl.getProfile().mid
@@ -73,9 +71,11 @@ def autolike():
 				if hasil['result']['posts'][zx]['postInfo']['liked'] == False:
 					try:    
 						cl.like(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],likeType=1002)
-						cl.comment(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],"Autolike")
+						cl.comment(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],"AutoLike")
 						kk.like(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],likeType=1002)
 						kk.comment(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],"Autolike")
+						ks.like(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],likeType=1002)
+						ks.comment(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],"Autolike")
 						print "Like"
 					except:
 							pass
@@ -161,7 +161,7 @@ def bot(op):
 #-------------------------------------------------------------------------------------#
         if op.type == 25:
             msg = op.message
-            if msg.text in ["Speed","speed"]:
+            if msg.text in ["Speed","speed","Sp","sp"]:
                     start = time.time()
                     elapsed_time = time.time() - start
                     cl.sendText(msg.to, "%sseconds" % (elapsed_time))
