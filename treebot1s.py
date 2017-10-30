@@ -513,7 +513,8 @@ def bot(op):
                                     'MSGTPL': '3'}
                 msg.text = None
                 ks.sendMessage(msg)
-            elif msg.text in ["cancel","Cancel"]:
+#----------------------------------------------------------# 
+	    elif msg.text in ["cancel","Cancel"]:
                 if msg.toType == 2:
                     group = cl.getGroup(msg.to)
                     if group.invitee is not None:
@@ -529,7 +530,7 @@ def bot(op):
                         cl.sendText(msg.to,"It can't be used besides the group。")
                     else:
                         cl.sendText(msg.to,"Impossible use besides")
-
+#----------------------------------------------------------# 
             elif msg.text in ["K1 cancel"]:
                 if msg.toType == 2:
                     group = ki.getGroup(msg.to)
@@ -546,7 +547,7 @@ def bot(op):
                         cl.sendText(msg.to,"It can't be used besides the group。")
                     else:
                         cl.sendText(msg.to,"Impossible use besides")
-                        
+ #----------------------------------------------------------#                        
             elif "Comment set:" in msg.text:
                 c = msg.text.replace("Comment set:","")
                 if c in [""," ","\n",None]:
@@ -732,6 +733,7 @@ def bot(op):
                     profile_C.statusMessage = string
                     ks.updateProfile(profile_C)
                     ks.sendText(msg.to,"display message " + string + " done")
+#----------------------------------------------------------# 
             elif "Mic:" in msg.text:
                 mmid = msg.text.replace("Mic:","")
                 msg.contentType = 13
@@ -761,7 +763,8 @@ def bot(op):
                         cl.sendText(msg.to,"ƖƬ ƜƛƧ ƬƲƦƝЄƊ ƠƑƑ。")
                     else:
                         cl.sendText(msg.to,"ƬƲƦƝЄƊ ƠƑƑ。")
-            elif msg.text in ["Auto join:on"]:
+#----------------------------------------------------------# 
+	    elif msg.text in ["Auto join:on"]:
                 if wait["autoJoin"] == True:
                     if wait["lang"] == "JP":
                         cl.sendText(msg.to,"ʆƠƖƝ ƠƝ ƛԼƦЄƛƊƳ。")
@@ -785,7 +788,8 @@ def bot(op):
                         cl.sendText(msg.to,"ƖƬ ƜƛƧ ƬƲƦƝЄƊ ƠƑƑ。")
                     else:
                         cl.sendText(msg.to,"ƬƲƦƝЄƊ ƠƑƑ。")
-            elif "Cancel invite:" in msg.text:
+#----------------------------------------------------------# 
+	    elif "Cancel invite:" in msg.text:
                 try:
                     strnum = msg.text.replace("Cancel invite:","")
                     if strnum == "off":
@@ -818,7 +822,8 @@ def bot(op):
                         cl.sendText(msg.to,"ƖƬ ƜƛƧ ƬƲƦƝЄƊ ƠƝ。")
                     else:
                         cl.sendText(msg.to,"ƬƲƦƝЄƊ ƠƝ。")
-            elif msg.text in ["Auto leave:off"]:
+#----------------------------------------------------------# 
+	    elif msg.text in ["Auto leave:off"]:
                 if wait["leaveRoom"] == False:
                     if wait["lang"] == "JP":
                         cl.sendText(msg.to,"ԼЄƛƔЄ ƠƑƑ ƛԼƦЄƛƊƳ。")
@@ -854,7 +859,8 @@ def bot(op):
                         cl.sendText(msg.to,"done")
                     else:
                         cl.sendText(msg.to,"Already。")                        
-            elif "Set" == msg.text:
+#----------------------------------------------------------# 
+		elif "Set" == msg.text:
                 md = ""
                 if wait["contact"] == True: md+="✔ Contact → on \n"       
                 else: md+="❌ Contact → off \n"      
@@ -873,7 +879,8 @@ def bot(op):
                 if wait["likeOn"] == True: md+="✔ Auto like → on \n"
                 else:md+="❌ Auto like → off \n" 
                 cl.sendText(msg.to,md)
-            elif msg.text in ["Group id","group id"]:
+#----------------------------------------------------------# 
+	    elif msg.text in ["Group id","group id"]:
                 gid = cl.getGroupIdsJoined()
                 g = ""
                 for i in gid:
@@ -887,6 +894,7 @@ def bot(op):
                     cl.sendText(msg.to,"Completion。")
                 else:
                     cl.sendText(msg.to,"key is wrong。")
+#----------------------------------------------------------#  
             elif msg.text in ["Auto like:on"]:
                 if wait["likeOn"] == True:
                     if wait["lang"] == "JP":
@@ -903,7 +911,7 @@ def bot(op):
                     wait["likeOn"] = False
                     if wait["lang"] == "JP":
                         cl.sendText(msg.to,"Already。")
-
+#----------------------------------------------------------# 
             elif msg.text in ["Auto add:on"]:
                 if wait["autoAdd"] == True:
                     if wait["lang"] == "JP":
@@ -928,6 +936,7 @@ def bot(op):
                         cl.sendText(msg.to,"It was turned off。")
                     else:
                         cl.sendText(msg.to,"Turned off。")
+#----------------------------------------------------------# 		
             elif "Massage add:" in msg.text:
                 wait["message"] = msg.text.replace("Massage add:","")
                 cl.sendText(msg.to,"The message was changed。")
@@ -2113,7 +2122,6 @@ def nameUpdate():
             pass
 #----------------------------------------
 
-#-------------------------------
 thread2 = threading.Thread(target=nameUpdate)
 thread2.daemon = True
 thread2.start()
