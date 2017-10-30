@@ -12,13 +12,12 @@ import os.path,sys,urllib,shutil,subprocess
 cl = LINETCR.LINE()
 cl.login(qr=True)
 cl.loginResult()
-ks = ki = kk = kc = cl 
+cl 
 print u"login success"
 reload(sys)
 sys.setdefaultencoding('utf-8')
 i = 0
 c_text = """this is autolike """
-
 
 def autolike(op):
     try:
