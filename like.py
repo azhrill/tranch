@@ -66,7 +66,7 @@ def sendMessage(to, text, contentMetadata={}, contentType=0):
 
 #---------------------------[AutoLike]---------------------------#
 def autolike():
-			for zx in range(0,100):
+			for zx in range(0,50):
 				hasil = cl.activity(limit=1000)
 				if hasil['result']['posts'][zx]['postInfo']['liked'] == False:
 					try:    
