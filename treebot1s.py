@@ -118,7 +118,7 @@ wait = {
     'autoAdd':False,
     'message':"Thanks add me ",
     "lang":"JP",
-    "comment":"Auto like",
+    "comment":"like",
     "likeOn":False,
     "commentOn":False,
     "commentBlack":{},
