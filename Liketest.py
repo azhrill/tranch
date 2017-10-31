@@ -1,27 +1,41 @@
 # -*- coding: utf-8 -*-
-import LINETHB
-from LINETHB.lib.curve.ttypes import *
+import LINETCR
+from LINETCR.lib.curve.ttypes import *
+from io import StringIO
 from datetime import datetime
-import time,random,sys,json,codecs,threading,glob
-cl = LINETHB.LINE()
-print u"""Login START"""
+import time,random,sys,json,codecs,threading,glob,sys
+import re,string,os
+import os.path,sys,urllib,shutil,subprocess
+
+
+cl = LINETCR.LINE()
 cl.login(qr=True)
 cl.loginResult()
+ks = ki = kk = kc = cl 
 print u"login success"
 reload(sys)
 sys.setdefaultencoding('utf-8')
-print u"login成功"
 i = 0
-c_text = """[Text]"""
+c_text = """like"""
 
 
-while True:
+def sendMessage(to, text, contentMetadata={}, contentType=0):
+    mes = Message()
+    mes.to, mes.from_ = to, profile.mid
+    mes.text = text
+    mes.contentType, mes.contentMetadata = contentType, contentMetadata
+    if to not in messageReq:
+        messageReq[to] = -1
+    messageReq[to] += 1
+	
+def autolike(op):
     try:
-        for posts in cl.activity(1)["result"]["posts"]:
-            if posts["postInfo"]["liked"] is False:
-                cl.like(posts["userInfo"]["writerMid"], posts["postInfo"]["postId"], 1002)
-                cl.comment(posts["userInfo"]["writerMid"],posts["postInfo"]["postId"],c_text)
-                print u"liked" + str(i)
-                i += 1
+		for posts in cl.activity(1)["result"]["posts"]:
+			if wait["posts"] == True:
+				if posts["postInfo"]["liked"] is False:
+					cl.like(posts["userInfo"]["writerMid"], posts["postInfo"]["postId"], 1002)
+					cl.comment(posts["userInfo"]["writerMid"],posts["postInfo"]["postId"],c_text)
+					print u"liked" + str(i)
+					i += 1
     except Exception as e:
             print e
