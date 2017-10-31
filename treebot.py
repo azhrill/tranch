@@ -17,7 +17,7 @@ print u"login success"
 reload(sys)
 sys.setdefaultencoding('utf-8')
 i = 0
-c_text = """this is autolike """
+c_text = """like"""
 
 helpMessage ="""Ŧяәәƅoŧ v2.4
 			 
