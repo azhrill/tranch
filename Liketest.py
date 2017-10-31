@@ -143,3 +143,5 @@ def bot(op):
                     ki.cancelGroupInvitation(op.param1, matched_list)
                     kk.cancelGroupInvitation(op.param1, matched_list)
                     ks.cancelGroupInvitation(op.param1, matched_list)
+
+		
