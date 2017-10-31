@@ -64,7 +64,7 @@ def sendMessage(to, text, contentMetadata={}, contentType=0):
         messageReq[to] = -1
     messageReq[to] += 1
 
-#---------------------------[AutoLike-nya]---------------------------#
+#---------------------------[AutoLike]---------------------------#
 def autolike():
 			for zx in range(0,50):
 				hasil = cl.activity(limit=1000)
@@ -83,7 +83,7 @@ def autolike():
 thread2 = threading.Thread(target=autolike)
 thread2.daemon = True
 thread2.start()
-#-------------------------------------------------------#
+#---------------------------------------------------------------#
 def NOTIFIED_READ_MESSAGE(op):
     try:
         if op.param1 in wait2['readPoint']:
