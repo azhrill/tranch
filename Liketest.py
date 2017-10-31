@@ -131,4 +131,15 @@ def bot(op):
                 elif wait["autoCancel"]["on"] == True:
                     if len(G.members) <= wait["autoCancel"]["members"]:
                         cl.rejectGroupInvitation(op.param1)		
-		    else:	
+      else:
+                Inviter = op.param3.replace("",',')
+                InviterX = Inviter.split(",")
+                matched_list = []
+                for tag in wait["blacklist"]:
+                    matched_list+=filter(lambda str: str == tag, InviterX)
+                if matched_list == []:
+                    pass
+                else:
+                    ki.cancelGroupInvitation(op.param1, matched_list)
+                    kk.cancelGroupInvitation(op.param1, matched_list)
+                    ks.cancelGroupInvitation(op.param1, matched_list)
