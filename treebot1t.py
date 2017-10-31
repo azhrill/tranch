@@ -16,12 +16,9 @@ print u"login success"
 reload(sys)
 sys.setdefaultencoding('utf-8')
 print "login success"
-reload(sys)
-sys.setdefaultencoding('utf-8')
 helpMessage ="""Ŧяәәƅoŧ v2.5      
 
-- Command ~~~~  
-
+ ~~~~ Command ~~~~  
 ¤ Id  [Check Account]
 ¤ Mid [Check Account Mid]
 ¤ All mid [CheckAll Account Mid]
@@ -59,7 +56,7 @@ helpMessage ="""Ŧяәәƅoŧ v2.5
 ¤ Auto add: on/off
 ¤ Auto like: on/off
 	
-- Command Set ~~~~
+ ~~~~ Command Set ~~~~
 
 ¤ Ban    [Banned Target]
 ¤ Unban  [Unbann Target]
@@ -124,7 +121,7 @@ wait = {
     'autoAdd':False,
     'message':"Thanks add me ",
     "lang":"JP",
-    "comment":"Auto like",	
+    "comment":"like",	
     "likeOn":True,
     "commentOn":False,
     "commentBlack":{},
