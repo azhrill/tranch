@@ -33,7 +33,7 @@ wait = {
     'autoAdd':True,
     'message':"Thanks for add me",
     "lang":"JP",
-    "comment":"Thanks for add me",
+    "comment":"like",
     "commentOn":False,
     "commentBlack":{},
     "wblack":False,
@@ -100,7 +100,7 @@ def NOTIFIED_READ_MESSAGE(op):
     except:
         pass
 
-#-------------------------[Jangan Dihapus]------------------------#
+#-------------------------------------------------------------------#
 
 def bot(op):
     try:
@@ -158,14 +158,14 @@ def bot(op):
                         cl.updateGroup(X)
                         Ti = cl.reissueGroupTicket(op.param1)
 
-#----------------------[Masukin Semua SC Yang Ente Pengen Disini]----------------------#
+#--------------------------------------------------------------------------------------#
         if op.type == 25:
             msg = op.message
             if msg.text in ["Speed","speed"]:
                     start = time.time()
                     elapsed_time = time.time() - start
                     cl.sendText(msg.to, "%sseconds" % (elapsed_time))
-#----------------------[Masukin Semua SC Yang Ente Pengen Disini]----------------------#
+#--------------------------------------------------------------------------------------#
 
         if op.type == 59:
             print op
@@ -194,4 +194,4 @@ while True:
             cl.Poll.rev = max(cl.Poll.rev, Op.revision)
             bot(Op)
             
-#-------------------------[Jangan Dihapus]------------------------#            
+--------------------------------------------------------------------------------------#
