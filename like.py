@@ -66,27 +66,24 @@ def sendMessage(to, text, contentMetadata={}, contentType=0):
 
 #---------------------------[AutoLike]---------------------------#
 def autolike():
-			for zx in range(0,50):
-				hasil = cl.activity(limit=1000)
-				if hasil['result']['posts'][zx]['postInfo']['liked'] == False:
-					try:    
-						cl.like(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],likeType=1002)
-						cl.comment(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],"like")
-					        kk.like(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],likeType=1002)
-						kk.comment(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],"like")
-						ks.like(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],likeType=1002)
-						ks.comment(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],"like")
-						ki.like(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],likeType=1002)
-						ki.comment(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],"like")
-						print "Like"
-					except:
-							pass
-				else:
-						print "Like"
-			time.sleep(600)
+    for zx in range(0,50):
+        hasil = cl.activity(limit=1000)
+    if hasil['result']['posts'][zx]['postInfo']['liked'] == False:
+        try: 
+            cl.like(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],likeType=1002)
+            cl.comment(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],"like")
+            kk.like(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],likeType=1002)
+            kk.comment(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],"like")
+            print "Like"
+        except:
+            pass
+    else:
+        print "Already Liked"
+        time.sleep(500)
 thread2 = threading.Thread(target=autolike)
 thread2.daemon = True
 thread2.start()
+
 #---------------------------------------------------------------#
 def NOTIFIED_READ_MESSAGE(op):
     try:
