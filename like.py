@@ -12,15 +12,18 @@ ks = ki = kk = kc = cl
 print u"login success"
 reload(sys)
 sys.setdefaultencoding('utf-8')
-
-KAC=[cl,ki,kk,kc,ks]
+i = 0
+c_text = """autolike """
+print "login success"
+reload(sys)
+sys.setdefaultencoding('utf-8')
+KAC=[cl,ki,kk,kc]
 mid = cl.getProfile().mid
 Amid = ki.getProfile().mid
 Bmid = kk.getProfile().mid
 Cmid = kc.getProfile().mid
-Dmid = ks.getProfile().mid
 
-Bots=["u9489706a45fcf78bea076c6b77f7067d","ucd886b532f581aa4de98af5898719392"]
+Bots=[mid,Amid,Bmid,Cmid]
 admin=["u9489706a45fcf78bea076c6b77f7067d","ucd886b532f581aa4de98af5898719392"]
 wait = {
     'contact':True,
@@ -65,26 +68,20 @@ def sendMessage(to, text, contentMetadata={}, contentType=0):
     messageReq[to] += 1
 
 #---------------------------[AutoLike]---------------------------#
-def autolike():
-    for zx in range(0,50):
-        hasil = cl.activity(limit=1000)
-    if hasil['result']['posts'][zx]['postInfo']['liked'] == False:
-        try: 
-            cl.like(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],likeType=1002)
-            cl.comment(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],"like")
-            kk.like(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],likeType=1002)
-            kk.comment(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],"like")
-            print "Like"
-        except:
-            pass
-    else:
-        print "Already Liked"
-        time.sleep(500)
-thread2 = threading.Thread(target=autolike)
-thread2.daemon = True
-thread2.start()
+ elif "Like:on" == msg.text:
+				if wait["posts"] == True:
+					for posts in cl.activity(1)["result"]["posts"]:
+							cl.like(posts["userInfo"]["writerMid"], posts["postInfo"]["postId"], 1002)
+							cl.comment(posts["userInfo"]["writerMid"],posts["postInfo"]["postId"],c_text)
+							print u"liked" + str(i)
+							i += 1
+							cl.sendText(msg.to,"like on")
+            elif "Like:off" == msg.text:
+				for posts in cl.activity(1)["result"]["posts"]:
+					if wait["posts"] == False:
+cl.sendText(msg.to,"like off")
+#---------------------------[AutoLike]---------------------------#
 
-#---------------------------------------------------------------#
 def NOTIFIED_READ_MESSAGE(op):
     try:
         if op.param1 in wait2['readPoint']:
@@ -99,7 +96,7 @@ def NOTIFIED_READ_MESSAGE(op):
     except:
         pass
 
-#-----------------------------------------------------#
+#---------------------------------------------------------------#
 
 def bot(op):
     try:
@@ -157,14 +154,15 @@ def bot(op):
                         cl.updateGroup(X)
                         Ti = cl.reissueGroupTicket(op.param1)
 
-#-------------------------------------------------------------------------------------#
+#---------------------------------------------------------------#
+
         if op.type == 25:
             msg = op.message
-            if msg.text in ["Speed","speed","Sp","sp"]:
+            if msg.text in ["Speed","speed"]:
                     start = time.time()
                     elapsed_time = time.time() - start
                     cl.sendText(msg.to, "%sseconds" % (elapsed_time))
-#--------------------------------------------------------------------------------------#
+#---------------------------------------------------------------#
 
         if op.type == 59:
             print op
@@ -193,4 +191,4 @@ while True:
             cl.Poll.rev = max(cl.Poll.rev, Op.revision)
             bot(Op)
             
-#----------------------------------------------------------------------------------------#            
+#---------------------------------------------------------------#
