@@ -2,12 +2,8 @@
 
 import LINETCR
 from LINETCR.lib.curve.ttypes import *
-from io import StringIO
 from datetime import datetime
-import time,random,sys,json,codecs,threading,glob,sys
-import re,string,os
-import os.path,sys,urllib,shutil,subprocess
-
+import time,random,sys,json,codecs,threading,glob,re,base64
 
 cl = LINETCR.LINE()
 cl.login(qr=True)
@@ -17,47 +13,25 @@ print u"login success"
 reload(sys)
 sys.setdefaultencoding('utf-8')
 i = 0
-c_text = """this is autolike """
-
-helpMessage ="""
-
-"""
-KAC = [cl,ki,kk,ks]
+c_text = """autolike """
+print "login success"
+reload(sys)
+sys.setdefaultencoding('utf-8')
+KAC=[cl,ki,kk,kc]
 mid = cl.getProfile().mid
 Amid = ki.getProfile().mid
-kimid = kk.getProfile().mid
-ki2mid = ks.getProfile().mid
-Bots = [mid,Amid,kimid,ki2mid]
-admin = ["u9489706a45fcf78bea076c6b77f7067d","ucd886b532f581aa4de98af5898719392"]
-me = cl.getProfile().mid
-bot1 = cl.getProfile().mid
-main = cl.getProfile().mid
-kicker1 = ki.getProfile().mid
-bots = me + kicker1
-protectname = []
-protecturl = []
-protection = []
-autocancel = {}
-autoinvite = []
-autoleaveroom = []
+Bmid = kk.getProfile().mid
+Cmid = kc.getProfile().mid
 
-admins = ["u9489706a45fcf78bea076c6b77f7067d","ucd886b532f581aa4de98af5898719392"]
-Rx3 = ["u1be68271e244853d7f59ac795bc0af99"]
-Rx2 = ["uac09b334047623bd3b38a544e55401ed"]
-Rx1 = ["ucd886b532f581aa4de98af5898719392"]
-Administrator = admins + Rx3 + Rx2 + Rx1
-AS = Rx2 + Rx1 + Rx3
-adminsA = admins + Rx3
-
-#omikuzi = ["大吉","中吉","小吉","末吉","大凶","凶"]
-
+Bots=[mid,Amid,Bmid,Cmid]
+admin=["u9489706a45fcf78bea076c6b77f7067d","ucd886b532f581aa4de98af5898719392"]
 wait = {
-    'contact':False,
+    'contact':True,
     'autoJoin':True,
     'autoCancel':{"on":True,"members":1},
     'leaveRoom':True,
-    'timeline':False,
-    'autoAdd':False,
+    'timeline':True,
+    'autoAdd':True,
     'message':"Thanks for add me",
     "lang":"JP",
     "comment":"Thanks for add me",
@@ -69,36 +43,20 @@ wait = {
     "blacklist":{},
     "wblacklist":False,
     "dblacklist":False,
-	"pnharfbot":{},
-    "pname":{},
-    "pro_name":{},
-	"posts":True,
-	}
-	
-wait2 = {
-	'readMember':{},
-	'readPoint':{},
-	'ROM':{},
-	'setTime':{}
+    "protectionOn":True,
+    "atjointicket":False
     }
-	
+
+wait2 = {
+    'readPoint':{},
+    'readMember':{},
+    'setTime':{},
+    'ROM':{}
+    }
+
 setTime = {}
-setTime = wait2["setTime"]
+setTime = wait2['setTime']
 
-res = {
-    'num':{},
-    'us':{},
-    'au':{},
-}
-
-
-def Cmd(string, commands): #/XXX, >XXX, ;XXX, ^XXX, %XXX, $XXX...
-    tex = [""]
-    for texX in tex:
-        for command in commands:
-            if string ==texX + command:
-                return True
-    return False
 
 def sendMessage(to, text, contentMetadata={}, contentType=0):
     mes = Message()
@@ -108,20 +66,37 @@ def sendMessage(to, text, contentMetadata={}, contentType=0):
     if to not in messageReq:
         messageReq[to] = -1
     messageReq[to] += 1
-	
-def autolike(op):
+
+#---------------------------[AutoLike]---------------------------#
+ elif "Like:on" == msg.text:
+				if wait["posts"] == True:
+					for posts in cl.activity(1)["result"]["posts"]:
+							cl.like(posts["userInfo"]["writerMid"], posts["postInfo"]["postId"], 1002)
+							cl.comment(posts["userInfo"]["writerMid"],posts["postInfo"]["postId"],c_text)
+							print u"liked" + str(i)
+							i += 1
+							cl.sendText(msg.to,"like on")
+            elif "Like:off" == msg.text:
+				for posts in cl.activity(1)["result"]["posts"]:
+					if wait["posts"] == False:
+cl.sendText(msg.to,"like off")
+#---------------------------[AutoLike]---------------------------#
+
+def NOTIFIED_READ_MESSAGE(op):
     try:
-		for posts in cl.activity(1)["result"]["posts"]:
-			if wait["posts"] == True:
-				if posts["postInfo"]["liked"] is False:
-					cl.like(posts["userInfo"]["writerMid"], posts["postInfo"]["postId"], 1002)
-					cl.comment(posts["userInfo"]["writerMid"],posts["postInfo"]["postId"],c_text)
-					print u"liked" + str(i)
-					i += 1
-    except Exception as e:
-            print e
-		
-	#-------------------------[Jangan Dihapus]------------------------#
+        if op.param1 in wait2['readPoint']:
+            Name = cl.getContact(op.param2).displayName
+            if Name in wait2['readMember'][op.param1]:
+                pass
+            else:
+                wait2['readMember'][op.param1] += "\n・" + Name
+                wait2['ROM'][op.param1][op.param2] = "・" + Name
+        else:
+            pass
+    except:
+        pass
+
+#---------------------------------------------------------------#
 
 def bot(op):
     try:
@@ -179,14 +154,15 @@ def bot(op):
                         cl.updateGroup(X)
                         Ti = cl.reissueGroupTicket(op.param1)
 
-#----------------------[Masukin Semua SC Yang Ente Pengen Disini]----------------------#
+#---------------------------------------------------------------#
+
         if op.type == 25:
             msg = op.message
             if msg.text in ["Speed","speed"]:
                     start = time.time()
                     elapsed_time = time.time() - start
                     cl.sendText(msg.to, "%sseconds" % (elapsed_time))
-#----------------------[Masukin Semua SC Yang Ente Pengen Disini]----------------------#
+#---------------------------------------------------------------#
 
         if op.type == 59:
             print op
@@ -215,5 +191,4 @@ while True:
             cl.Poll.rev = max(cl.Poll.rev, Op.revision)
             bot(Op)
             
-#-------------------------[Jangan Dihapus]------------------------#       	
-		
+#---------------------------------------------------------------#
