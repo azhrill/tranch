@@ -67,21 +67,25 @@ def sendMessage(to, text, contentMetadata={}, contentType=0):
     messageReq[to] += 1
 
 #---------------------------[AutoLike-nya]---------------------------#
-def autolike(op):
-    try:
-		for posts in cl.activity(1)["result"]["posts"]:
-			if wait["posts"] == True:
-				if posts["postInfo"]["liked"] is False:
-					cl.like(posts["userInfo"]["writerMid"], posts["postInfo"]["postId"], 1002)
-					cl.comment(posts["userInfo"]["writerMid"],posts["postInfo"]["postId"],c_text)
-					print u"liked" + str(i)
-					i += 1
-    except Exception as e:
-            print e
-	
-		
+def autolike():
+			for zx in range(0,20):
+				hasil = cl.activity(limit=20)
+				if hasil['result']['posts'][zx]['postInfo']['liked'] == False:
+					try:    
+						cl.like(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],likeType=1002)
+						cl.comment(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],"Auto Like")
+						kk.like(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],likeType=1002)
+						kk.comment(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],"Treerachai")
+						print "Like"
+					except:
+							pass
+				else:
+						print "Like"
+			time.sleep(500)
+thread2 = threading.Thread(target=autolike)
+thread2.daemon = True
+thread2.start()
 #---------------------------[AutoLike-nya]---------------------------#
-
 def NOTIFIED_READ_MESSAGE(op):
     try:
         if op.param1 in wait2['readPoint']:
