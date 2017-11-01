@@ -13,17 +13,16 @@ print u"login success"
 reload(sys)
 sys.setdefaultencoding('utf-8')
 i = 0
-c_text = """autolike """
-print "login success"
-reload(sys)
-sys.setdefaultencoding('utf-8')
-KAC=[cl,ki,kk,kc]
+c_text = """this is autolike """
+
+KAC=[cl,ki,kk,kc,ks]
 mid = cl.getProfile().mid
 Amid = ki.getProfile().mid
 Bmid = kk.getProfile().mid
 Cmid = kc.getProfile().mid
+Dmid = ks.getProfile().mid
 
-Bots=[mid,Amid,Bmid,Cmid]
+Bots=[mid,Amid,Bmid,Cmid,Dmid]
 admin=["u9489706a45fcf78bea076c6b77f7067d","ucd886b532f581aa4de98af5898719392"]
 wait = {
     'contact':True,
@@ -67,20 +66,21 @@ def sendMessage(to, text, contentMetadata={}, contentType=0):
         messageReq[to] = -1
     messageReq[to] += 1
 
-#---------------------------[AutoLike]---------------------------#
- elif "Like:on" == msg.text:
-				if wait["posts"] == True:
-					for posts in cl.activity(1)["result"]["posts"]:
-							cl.like(posts["userInfo"]["writerMid"], posts["postInfo"]["postId"], 1002)
-							cl.comment(posts["userInfo"]["writerMid"],posts["postInfo"]["postId"],c_text)
-							print u"liked" + str(i)
-							i += 1
-							cl.sendText(msg.to,"like on")
-            elif "Like:off" == msg.text:
-				for posts in cl.activity(1)["result"]["posts"]:
-					if wait["posts"] == False:
-cl.sendText(msg.to,"like off")
-#---------------------------[AutoLike]---------------------------#
+#---------------------------[AutoLike-nya]---------------------------#
+def autolike(op):
+    try:
+		for posts in cl.activity(1)["result"]["posts"]:
+			if wait["posts"] == True:
+				if posts["postInfo"]["liked"] is False:
+					cl.like(posts["userInfo"]["writerMid"], posts["postInfo"]["postId"], 1002)
+					cl.comment(posts["userInfo"]["writerMid"],posts["postInfo"]["postId"],c_text)
+					print u"liked" + str(i)
+					i += 1
+    except Exception as e:
+            print e
+	
+		
+#---------------------------[AutoLike-nya]---------------------------#
 
 def NOTIFIED_READ_MESSAGE(op):
     try:
@@ -96,7 +96,7 @@ def NOTIFIED_READ_MESSAGE(op):
     except:
         pass
 
-#---------------------------------------------------------------#
+#-------------------------[Jangan Dihapus]------------------------#
 
 def bot(op):
     try:
@@ -154,15 +154,14 @@ def bot(op):
                         cl.updateGroup(X)
                         Ti = cl.reissueGroupTicket(op.param1)
 
-#---------------------------------------------------------------#
-
+#----------------------[Masukin Semua SC Yang Ente Pengen Disini]----------------------#
         if op.type == 25:
             msg = op.message
             if msg.text in ["Speed","speed"]:
                     start = time.time()
                     elapsed_time = time.time() - start
                     cl.sendText(msg.to, "%sseconds" % (elapsed_time))
-#---------------------------------------------------------------#
+#----------------------[Masukin Semua SC Yang Ente Pengen Disini]----------------------#
 
         if op.type == 59:
             print op
@@ -191,4 +190,4 @@ while True:
             cl.Poll.rev = max(cl.Poll.rev, Op.revision)
             bot(Op)
             
-#---------------------------------------------------------------#
+#-------------------------[Jangan Dihapus]------------------------#            
