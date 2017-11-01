@@ -68,18 +68,24 @@ def sendMessage(to, text, contentMetadata={}, contentType=0):
     messageReq[to] += 1
 
 #---------------------------[AutoLike]---------------------------#
- elif "Like:on" == msg.text:
-				if wait["posts"] == True:
-					for posts in cl.activity(1)["result"]["posts"]:
-							cl.like(posts["userInfo"]["writerMid"], posts["postInfo"]["postId"], 1002)
-							cl.comment(posts["userInfo"]["writerMid"],posts["postInfo"]["postId"],c_text)
-							print u"liked" + str(i)
-							i += 1
-							cl.sendText(msg.to,"like on")
-            elif "Like:off" == msg.text:
-				for posts in cl.activity(1)["result"]["posts"]:
-					if wait["posts"] == False:
-cl.sendText(msg.to,"like off")
+ eldef autolike():
+    for zx in range(0,20):
+        hasil = cl.activity(limit=100)
+    if hasil['result']['posts'][zx]['postInfo']['liked'] == False:
+        try: 
+            cl.like(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],likeType=1002)
+            cl.comment(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],"like")
+            kk.like(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],likeType=1002)
+            kk.comment(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],"like")
+            print "Like"
+        except:
+            pass
+    else:
+        print "Already Liked"
+        time.sleep(500)
+thread2 = threading.Thread(target=autolike)
+thread2.daemon = True
+thread2.start()
 #---------------------------[AutoLike]---------------------------#
 
 def NOTIFIED_READ_MESSAGE(op):
