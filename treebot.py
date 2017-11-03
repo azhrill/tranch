@@ -19,7 +19,7 @@ sys.setdefaultencoding('utf-8')
 i = 0
 c_text = """like"""
 
-helpMessage ="""Ŧяәәƅoŧ v2.4
+helpMessage ="""Ŧяәәƅoŧ v2.6
 			 
 ¤ Id
 ¤ Mid
