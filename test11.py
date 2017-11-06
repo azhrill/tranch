@@ -8,6 +8,7 @@ import time,random,sys,json,codecs,threading,glob,requests,urllib
 cl = LINETCR.LINE()
 cl.login(qr=True)
 cl.loginResult()
+cl = ki = ki2 = ki3 = ki4 = ki5 = ki6 = ki7 = ki8 = ki9 = k1 = k2 = k3 = k4 = k5 = k6 = k6 = k8 = k9 = w1 = w2 = w3 = w4 = w5 = w6 = w7 = w8 = w9 = l1 = l2 = l3 = l4 =l5]
 
 #cl = LINETCR.LINE()
 #cl.login(token="authToken Kamu")
@@ -95,7 +96,6 @@ helpMessage ="""||=====  F O R   U S E R  =====||
 """
 helo=""
 
-KAC=[cl,ki,ki2,ki3,ki4,ki5,ki6,ki7,ki8,ki9,k1,k2,k3,k4,k5,k6,k6,k8,k9,w1,w2,w3,w4,w5,w6,w7,w8,w9,l1,l2,l3,l4,l5]
 mid = cl.getProfile().mid
 kimid = ki.getProfile().mid
 ki2mid = ki2.getProfile().mid
