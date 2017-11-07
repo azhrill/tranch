@@ -940,7 +940,7 @@ def bot(op):
                 else:
                     wait["commentOn"] = True
                     if wait["lang"] == "JP":
-                        cl.sendText(msg.to,"ã‚ªãƒ³ã«ã—ã¾ã—ãŸ👈")
+                        cl.sendText(msg.to,"It is already turned on")
                     else:
                         cl.sendText(msg.to,"è¦äº†å¼€👈")
             elif msg.text in ["Com off"]:
@@ -1518,7 +1518,7 @@ def bot(op):
 
             elif msg.text in ["Sp","Speed","speed"]:
                 start = time.time()
-                cl.sendText(msg.to, "Mohon Bersabar Ini Gratisan...")
+                cl.sendText(msg.to, "Waitting...")
                 elapsed_time = time.time() - start
                 cl.sendText(msg.to, "%sseconds" % (elapsed_time))
 
