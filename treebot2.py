@@ -14,78 +14,78 @@ print u"login success"
 reload(sys)
 sys.setdefaultencoding('utf-8')
 
-helpMessage ="""||=====  F O R   U S E R  =====||
-|| Tagall      - Tagall Member Group
-|| Lurking     - Set Point Read
-|| Result      - Reading Point
-|| Ginfo       - Info Grup
-||===== F O R   A D M I N =====||
-|| Glist       - List Group BOT
-|| Cancel      - Cancel All Pending Grup
-|| Mid @       - Get MID 
-|| Invite      - Invite Via Send Contact
-|| Invite:     - Via MID
-|| Whitelist @ - Via Tag
-|| Whitelist:  - Via Mid
-|| Whitelist   - Via Send Contact
-|| Blacklist @ - Via Tag
-|| Blacklist:  - Via Mid
-|| Blacklist   - Via Send Contact
-|| Clear ban   - Delete All Blacklist
-|| Link on     - Open QR
-|| Link off    - Close QR
-|| Gurl        - Open QR And Get Link
-|| Url         - Get QR Link
-|| Gname       - Change Name Group
-|| Banlist     - Cek Tersangka Kriminal
-|| Details grup - Via Gid
-|| Inviteme:    - Via Gid
-|| Info grup
-|| Clear grup
-||===== F O R  K I C K E R =====||
-|| Nuke
-|| Ratakan
-|| Kick @       - Via Tag
-|| Kick:        - Via MID
-||===== F O R  P L A Y E R =====||
-|| Bc:ct 
-|| Bc:grup
-|| Block @
-|| Blocklist
-|| Spam on/off
-|| Uni
-|| Bot:ct      -  Contact BOT
-|| Bot:grup    - Grup Joined BOT
-|| Allname:    - Change All Name BOT
-|| Allbio:     - Change All Bio BOT
-|| Bot sp      - Tes Speed BOT
-|| Speed       - Tes Speed
-|| Mycopy @    - Copy Profile 
-|| Mybackup @  - Backup Profile
-||========================||
+helpMessage ="""¤¤¤¤¤ F O R  U S E R ¤¤¤¤¤
+¤¤ Tagall     - Tagall Member Group
+¤¤ Lurking    - Set Point Read
+¤¤ Result     - Reading Point
+¤¤ Ginfo      - Info Grup
+¤¤¤¤¤ F O R   A D M I N ¤¤¤¤¤
+¤¤ Glist      - List Group BOT
+¤¤ Cancel     - Cancel All Pending Grup
+¤¤ Mid @      - Get MID 
+¤¤ Invite     - Invite Via Send Contact
+¤¤ Invite:    - Via MID
+¤¤ Whitelist @ - Via Tag
+¤¤ Whitelist:  - Via Mid
+¤¤ Whitelist   - Via Send Contact
+¤¤ Blacklist @ - Via Tag
+¤¤ Blacklist:  - Via Mid
+¤¤ Blacklist   - Via Send Contact
+¤¤ Clear ban   - Delete All Blacklist
+¤¤ Link on     - Open QR
+¤¤ Link off    - Close QR
+¤¤ Gurl        - Open QR And Get Link
+¤¤ Url         - Get QR Link
+¤¤ Gname       - Change Name Group
+¤¤ Banlist     - Cek Tersangka Kriminal
+¤¤ Details grup - Via Gid
+¤¤ Inviteme:    - Via Gid
+¤¤ Info grup
+¤¤ Clear grup
+¤¤¤¤¤ F O R  K I C K E R ¤¤¤¤¤
+¤¤ Nuke
+¤¤ Ratakan
+¤¤ Kick @       - Via Tag
+¤¤ Kick:        - Via MID
+¤¤¤¤¤ F O R  P L A Y E R ¤¤¤¤¤
+¤¤ Bc:ct 
+¤¤ Bc:grup
+¤¤ Block @
+¤¤ Blocklist
+¤¤ Spam on/off
+¤¤ Uni
+¤¤ Bot:ct      -  Contact BOT
+¤¤ Bot:grup    - Grup Joined BOT
+¤¤ Allname:    - Change All Name BOT
+¤¤ Allbio:     - Change All Bio BOT
+¤¤ Bot sp      - Tes Speed BOT
+¤¤ Speed       - Tes Speed
+¤¤ Mycopy @    - Copy Profile 
+¤¤ Mybackup @  - Backup Profile
+¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤
 
-||===== S E T T I G S =====||          
-|| [Like:on/off]     
-|| [Add on/off] 	 
-|| [Auto join on/off] 	   
-|| [Contact on/off] 	
-|| [Leave on/off]  
-|| [Share on/off]           
-|| [Add on/off] 		   
-|| [Jam on/off]			   
-|| [Jam say:]			   
-|| [Com on/off]	
-|| [Message set:]	
-|| [Comment set:]	
-|| [Pesan add:]	
-||===== P R O T E C T =====||        
-|| [Panick:on/off]      
-|| [Protect on]			   
-|| [Qrprotect on/off]			   
-|| [Inviteprotect on/off]			   
-|| [Cancelprotect on/off]		   
-|| [Staff add/remove @]	   
-||======= FOR ADMIN =======||
+¤¤¤¤¤¤ S E T T I N G ¤¤¤¤¤     
+¤¤ [Like:on/off]     
+¤¤ [Add on/off] 	 
+¤¤ [Auto join on/off] 	   
+¤¤ [Contact on/off] 	
+¤¤ [Leave on/off]  
+¤¤ [Share on/off]           
+¤¤ [Add on/off] 		   
+¤¤ [Jam on/off]			   
+¤¤ [Jam say:]			   
+¤¤ [Com on/off]	
+¤¤ [Message set:]	
+¤¤ [Comment set:]	
+¤¤ [Pesan add:]	
+¤¤¤¤¤ P R O T E C T ¤¤¤¤¤       
+¤¤ [Panick:on/off]      
+¤¤ [Protect on]			   
+¤¤ [Qrprotect on/off]			   
+¤¤ [Inviteprotect on/off]			   
+¤¤ [Cancelprotect on/off]		   
+¤¤ [Staff add/remove @]	   
+¤¤¤¤¤ FOR ADMIN ¤¤¤¤¤
   
 """
 KAC=[cl,ki,ki2,ki3,ki4,ki5]
@@ -1640,14 +1640,14 @@ def bot(op):
                 h = ""
                 for i in gid:
                     h += "[★] %s\n" % (cl.getGroup(i).name +"→["+str(len(cl.getGroup(i).members))+"]")
-                cl.sendText(msg.to,"▒▒▓█[List Group]█▓▒▒\n"+ h +"Total Group =" +"["+str(len(gid))+"]")
+                cl.sendText(msg.to,"[List Group]\n"+ h +"Total Group =" +"["+str(len(gid))+"]")
 
             elif msg.text in ["Invite"]:
               if msg.from_ in admin:
                 wait["ricoinvite"] = True
                 random.choice(KAC).sendText(msg.to,"send contact 😉")
                 
-            elif ("Cek " in msg.text):
+            elif ("Check " in msg.text):
                    key = eval(msg.contentMetadata["MENTION"])
                    key1 = key["MENTIONEES"][0]["M"]
                    mi = cl.getContact(key1)
@@ -2257,8 +2257,8 @@ def bot(op):
 #-----------------------------------------------
             elif msg.text in ["Welcome","wc","welcome","Wc"]:
                 ginfo = cl.getGroup(msg.to)
-                cl.sendText(msg.to,"Welcom to grup " + str(ginfo.name))
-                cl.sendText(msg.to,"Owner Grup " + str(ginfo.name) + " :\n" + ginfo.creator.displayName )
+                cl.sendText(msg.to,"Welcom to Group " + str(ginfo.name))
+                cl.sendText(msg.to,"Owner Group " + str(ginfo.name) + " :\n" + ginfo.creator.displayName )
 #----------------------------------------------- 
         if op.type == 19:
             try:
