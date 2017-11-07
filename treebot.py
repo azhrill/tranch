@@ -1794,7 +1794,7 @@ def bot(op):
 #-----------------------------------------------------------
             elif msg.text in ["Bot sp","Bot speed"]:
                 start = time.time()
-                ki.sendText(msg.to, "Mohon Bersabar Ini Gratisan...")
+                ki.sendText(msg.to, "Waiting...")
                 elapsed_time = time.time() - start
                 ki.sendText(msg.to, "%sseconds" % (elapsed_time))
                 elapsed_time = time.time() - start
