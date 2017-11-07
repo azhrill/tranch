@@ -836,7 +836,7 @@ def bot(op):
                 if wait["autoAdd"] == True: md+="☞ Auto add → ✔\n"
                 else:md+="☞ Auto add → ❌\n"
                 if wait["commentOn"] == True: md+="☞ Auto komentar → ✔\n"
-                else:md+="☞ Auto komentar → ❌\n"
+                else:md+="☞ Auto comment → ❌\n"
                 if wait["protect"] == True: md+="☞ Protect → ✔\n"
                 else:md+="☞ Protect → ❌\n"
                 if wait["linkprotect"] == True: md+="☞ Link Protect → ✔\n"
