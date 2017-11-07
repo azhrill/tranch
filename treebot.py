@@ -14,78 +14,78 @@ print u"login success"
 reload(sys)
 sys.setdefaultencoding('utf-8')
 
-helpMessage ="""¤¤¤¤¤ F O R  U S E R ¤¤¤¤¤
-¤¤ Tagall     - Tagall Member Group
-¤¤ Lurking    - Set Point Read
-¤¤ Result     - Reading Point
-¤¤ Ginfo      - Info Grup
-¤¤¤¤¤ F O R   A D M I N ¤¤¤¤¤
-¤¤ Glist      - List Group BOT
-¤¤ Cancel     - Cancel All Pending Grup
-¤¤ Mid @      - Get MID 
-¤¤ Invite     - Invite Via Send Contact
-¤¤ Invite:    - Via MID
-¤¤ Whitelist @ - Via Tag
-¤¤ Whitelist:  - Via Mid
-¤¤ Whitelist   - Via Send Contact
-¤¤ Blacklist @ - Via Tag
-¤¤ Blacklist:  - Via Mid
-¤¤ Blacklist   - Via Send Contact
-¤¤ Clear ban   - Delete All Blacklist
-¤¤ Link on     - Open QR
-¤¤ Link off    - Close QR
-¤¤ Gurl        - Open QR And Get Link
-¤¤ Url         - Get QR Link
-¤¤ Gname       - Change Name Group
-¤¤ Banlist     - Cek Tersangka Kriminal
-¤¤ Details grup - Via Gid
-¤¤ Inviteme:    - Via Gid
-¤¤ Info grup
-¤¤ Clear grup
-¤¤¤¤¤ F O R  K I C K E R ¤¤¤¤¤
-¤¤ Nuke
-¤¤ Ratakan
-¤¤ Kick @       - Via Tag
-¤¤ Kick:        - Via MID
-¤¤¤¤¤ F O R  P L A Y E R ¤¤¤¤¤
-¤¤ Bc:ct 
-¤¤ Bc:grup
-¤¤ Block @
-¤¤ Blocklist
-¤¤ Spam on/off
-¤¤ Uni
-¤¤ Bot:ct      -  Contact BOT
-¤¤ Bot:grup    - Grup Joined BOT
-¤¤ Allname:    - Change All Name BOT
-¤¤ Allbio:     - Change All Bio BOT
-¤¤ Bot sp      - Tes Speed BOT
-¤¤ Speed       - Tes Speed
-¤¤ Mycopy @    - Copy Profile 
-¤¤ Mybackup @  - Backup Profile
-¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤
+helpMessage ="""¤¤¤¤¤  F O R  U S E R  ¤¤¤¤¤
+¤¤  Tagall     - Tagall Member Group
+¤¤  Lurking    - Set Point Read
+¤¤  Result     - Reading Point
+¤¤  Ginfo      - Info Grup
+¤¤¤¤¤  F O R   A D M I N  ¤¤¤¤¤
+¤¤  Glist      - List Group BOT
+¤¤  Cancel     - Cancel All Pending Grup
+¤¤  Mid @      - Get MID 
+¤¤  Invite     - Invite Via Send Contact
+¤¤  Invite:    - Via MID
+¤¤  Whitelist @ - Via Tag
+¤¤  Whitelist:  - Via Mid
+¤¤  Whitelist   - Via Send Contact
+¤¤  Blacklist @ - Via Tag
+¤¤  Blacklist:  - Via Mid
+¤¤  Blacklist   - Via Send Contact
+¤¤  Clear ban   - Delete All Blacklist
+¤¤  Link on     - Open QR
+¤¤  Link off    - Close QR
+¤¤  Gurl        - Open QR And Get Link
+¤¤  Url         - Get QR Link
+¤¤  Gname       - Change Name Group
+¤¤  Banlist     - Cek Tersangka Kriminal
+¤¤  Details grup - Via Gid
+¤¤  Inviteme:    - Via Gid
+¤¤  Info grup
+¤¤  Clear grup
+¤¤¤¤¤  F O R  K I C K E R  ¤¤¤¤¤
+¤¤  Nuke
+¤¤  Ratakan
+¤¤  Kick @       - Via Tag
+¤¤  Kick:        - Via MID
+¤¤¤¤¤  F O R  P L A Y E R  ¤¤¤¤¤
+¤¤  Bc:ct 
+¤¤  Bc:grup
+¤¤  Block @
+¤¤  Blocklist
+¤¤  Spam on/off
+¤¤  Uni
+¤¤  Bot:ct      -  Contact BOT
+¤¤  Bot:grup    - Grup Joined BOT
+¤¤  Allname:    - Change All Name BOT
+¤¤  Allbio:     - Change All Bio BOT
+¤¤  Bot sp      - Tes Speed BOT
+¤¤  Speed       - Tes Speed
+¤¤  Mycopy @    - Copy Profile 
+¤¤  Mybackup @  - Backup Profile
+¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤
 
-¤¤¤¤¤¤ S E T T I N G ¤¤¤¤¤     
-¤¤ [Like:on/off]     
-¤¤ [Add on/off] 	 
-¤¤ [Auto join on/off] 	   
-¤¤ [Contact on/off] 	
-¤¤ [Leave on/off]  
-¤¤ [Share on/off]           
-¤¤ [Add on/off] 		   
-¤¤ [Jam on/off]			   
-¤¤ [Jam say:]			   
-¤¤ [Com on/off]	
-¤¤ [Message set:]	
-¤¤ [Comment set:]	
-¤¤ [Pesan add:]	
+¤¤¤¤¤¤  S E T T I N G  ¤¤¤¤¤     
+¤¤  [Like:on/off]     
+¤¤  [Add on/off] 	 
+¤¤  [Auto join on/off] 	   
+¤¤  [Contact on/off] 	
+¤¤  [Leave on/off]  
+¤¤  [Share on/off]           
+¤¤  [Add on/off] 		   
+¤¤  [Jam on/off]			   
+¤¤  [Jam say:]			   
+¤¤  [Com on/off]	
+¤¤  [Message set:]	
+¤¤  [Comment set:]	
+¤¤  [Pesan add:]	
 ¤¤¤¤¤ P R O T E C T ¤¤¤¤¤       
-¤¤ [Panick:on/off]      
-¤¤ [Protect on]			   
-¤¤ [Qrprotect on/off]			   
-¤¤ [Inviteprotect on/off]			   
-¤¤ [Cancelprotect on/off]		   
-¤¤ [Staff add/remove @]	   
-¤¤¤¤¤ FOR ADMIN ¤¤¤¤¤
+¤¤  [Panick:on/off]      
+¤¤  [Protect on]			   
+¤¤  [Qrprotect on/off]			   
+¤¤  [Inviteprotect on/off]			   
+¤¤  [Cancelprotect on/off]		   
+¤¤  [Staff add/remove @]	   
+¤¤¤¤¤  FOR ADMIN  ¤¤¤¤¤
   
 """
 KAC=[cl,ki,ki2,ki3,ki4,ki5]
