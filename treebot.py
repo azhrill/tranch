@@ -62,7 +62,6 @@ helpMessage ="""¤¤¤¤¤  F O R  U S E R  ¤¤¤¤¤
 ¤¤  Speed       - Tes Speed
 ¤¤  Mycopy @    - Copy Profile 
 ¤¤  Mybackup @  - Backup Profile
-¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤
 
 ¤¤¤¤¤¤  S E T T I N G  ¤¤¤¤¤     
 ¤¤  [Like:on/off]     
