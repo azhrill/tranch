@@ -1530,9 +1530,9 @@ def bot(op):
             elif cms(msg.text,["creator","Creator"]):
                 msg.contentType = 13
                 msg.contentMetadata = {'mid': admsa}
-                cl.sendText(msg.to,"􀜁􀇔􏿿 My Creator 􀜁􀇔􏿿 ")
+                cl.sendText(msg.to," My Creator ")
                 cl.sendMessage(msg)
-                cl.sendText(msg.to,"􀜁􀇔􏿿 Dont Kick out From group 􀜁􀇔􏿿 ")
+                cl.sendText(msg.to," Dont Kick out From group ")
             
             elif "Inviteme: " in msg.text:
               if msg.from_ in admin:
