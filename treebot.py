@@ -14,77 +14,78 @@ print u"login success"
 reload(sys)
 sys.setdefaultencoding('utf-8')
 
-helpMessage ="""-----  F O R  U S E R  -----
-¤  Tagall     - Tagall Member Group
-¤  Lurking    - Set Point Read
-¤  Result     - Reading Point
-¤  Ginfo      - Info Grup
------  F O R   A D M I N  -----
-¤  Glist      - List Group BOT
-¤  Cancel     - Cancel All Pending Grup
-¤  Mid @      - Get MID 
-¤  Invite     - Invite Via Send Contact
-¤  Invite:    - Via MID
-¤  Whitelist @ - Via Tag
-¤  Whitelist:  - Via Mid
-¤  Whitelist   - Via Send Contact
-¤  Blacklist @ - Via Tag
-¤  Blacklist:  - Via Mid
-¤  Blacklist   - Via Send Contact
-¤  Clear ban   - Delete All Blacklist
-¤  Link on     - Open QR
-¤  Link off    - Close QR
-¤  Gurl        - Open QR And Get Link
-¤  Url         - Get QR Link
-¤  Gname       - Change Name Group
-¤  Banlist     - Cek Tersangka Kriminal
-¤  Details grup - Via Gid
-¤  Inviteme:    - Via Gid
-¤  Info grup
-¤  Clear grup
------  F O R  K I C K E R  -----
-¤  Nuke
-¤  Ratakan
-¤  Kick @       - Via Tag
-¤  Kick:        - Via MID
------  F O R  P L A Y E R  -----
-¤  Bc:ct 
-¤  Bc:grup
-¤  Block @
-¤  Blocklist
-¤  Spam on/off
-¤  Uni
-¤  Bot:ct      -  Contact BOT
-¤  Bot:grup    - Grup Joined BOT
-¤  Allname:    - Change All Name BOT
-¤  Allbio:     - Change All Bio BOT
-¤  Bot sp      - Tes Speed BOT
-¤  Speed       - Tes Speed
-¤  Mycopy @    - Copy Profile 
-¤  Mybackup @  - Backup Profile
+helpMessage ="""¤¤¤¤¤ F O R  U S E R ¤¤¤¤¤
+¤¤ Tagall     - Tagall Member Group
+¤¤ Lurking    - Set Point Read
+¤¤ Result     - Reading Point
+¤¤ Ginfo      - Info Grup
+¤¤¤¤¤ F O R   A D M I N ¤¤¤¤¤
+¤¤ Glist      - List Group BOT
+¤¤ Cancel     - Cancel All Pending Grup
+¤¤ Mid @      - Get MID 
+¤¤ Invite     - Invite Via Send Contact
+¤¤ Invite:    - Via MID
+¤¤ Whitelist @ - Via Tag
+¤¤ Whitelist:  - Via Mid
+¤¤ Whitelist   - Via Send Contact
+¤¤ Blacklist @ - Via Tag
+¤¤ Blacklist:  - Via Mid
+¤¤ Blacklist   - Via Send Contact
+¤¤ Clear ban   - Delete All Blacklist
+¤¤ Link on     - Open QR
+¤¤ Link off    - Close QR
+¤¤ Gurl        - Open QR And Get Link
+¤¤ Url         - Get QR Link
+¤¤ Gname       - Change Name Group
+¤¤ Banlist     - Cek Tersangka Kriminal
+¤¤ Details grup - Via Gid
+¤¤ Inviteme:    - Via Gid
+¤¤ Info grup
+¤¤ Clear grup
+¤¤¤¤¤ F O R  K I C K E R ¤¤¤¤¤
+¤¤ Nuke
+¤¤ Ratakan
+¤¤ Kick @       - Via Tag
+¤¤ Kick:        - Via MID
+¤¤¤¤¤ F O R  P L A Y E R ¤¤¤¤¤
+¤¤ Bc:ct 
+¤¤ Bc:grup
+¤¤ Block @
+¤¤ Blocklist
+¤¤ Spam on/off
+¤¤ Uni
+¤¤ Bot:ct      -  Contact BOT
+¤¤ Bot:grup    - Grup Joined BOT
+¤¤ Allname:    - Change All Name BOT
+¤¤ Allbio:     - Change All Bio BOT
+¤¤ Bot sp      - Tes Speed BOT
+¤¤ Speed       - Tes Speed
+¤¤ Mycopy @    - Copy Profile 
+¤¤ Mybackup @  - Backup Profile
+¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤
 
------  S E T T I N G  ------     
-¤  [Like:on/off]     
-¤  [Add on/off] 	 
-¤  [Auto join on/off] 	   
-¤  [Contact on/off] 	
-¤  [Leave on/off]  
-¤  [Share on/off]           
-¤  [Add on/off] 		   
-¤  [Jam on/off]			   
-¤  [Jam say:]			   
-¤  [Com on/off]	
-¤  [Message set:]	
-¤  [Comment set:]	
-¤  [Pesan add:]	
------ P R O T E C T -----       
-¤  [Panick:on/off]      
-¤  [Protect on]			   
-¤  [Qrprotect on/off]			   
-¤  [Inviteprotect on/off]			   
-¤  [Cancelprotect on/off]		   
-¤  [Staff add/remove @]	   
------  FOR ADMIN  -----
+¤¤¤¤¤¤ S E T T I N G ¤¤¤¤¤     
+¤¤ [Like:on/off]     
+¤¤ [Add on/off] 	 
+¤¤ [Auto join on/off] 	   
+¤¤ [Contact on/off] 	
+¤¤ [Leave on/off]  
+¤¤ [Share on/off]           
+¤¤ [Add on/off] 		   
+¤¤ [Jam on/off]			   
+¤¤ [Jam say:]			   
+¤¤ [Com on/off]	
+¤¤ [Message set:]	
+¤¤ [Comment set:]	
+¤¤ [Pesan add:]	
+¤¤¤¤¤ P R O T E C T ¤¤¤¤¤       
+¤¤ [Panick:on/off]      
+¤¤ [Protect on]			   
+¤¤ [Qrprotect on/off]			   
+¤¤ [Inviteprotect on/off]			   
+¤¤ [Cancelprotect on/off]		   
+¤¤ [Staff add/remove @]	   
+¤¤¤¤¤ FOR ADMIN ¤¤¤¤¤
   
 """
 KAC=[cl,ki,ki2,ki3,ki4,ki5]
@@ -107,7 +108,7 @@ wait = {
     'autoAdd':True,
     'message':" ",
     "lang":"JP",
-    "comment":"Auto Like By Ŧяәәƅoŧ",
+    "comment":"Auto Like By Ŧяɘɘяɘɔɥɘı",
     "commentOn":False,
     "likeOn":False,
     "commentBlack":{},
@@ -198,7 +199,7 @@ def bot(op):
             msg = op.message
             if msg.toType == 0:
                 msg.to = msg.from_
-                if msg.from_ == "ucd886b532f581aa4de98af5898719392":
+                if msg.from_ == "u9489706a45fcf78bea076c6b77f7067d":
                     if "join:" in msg.text:
                         list_ = msg.text.split(":")
                         try:
@@ -835,8 +836,8 @@ def bot(op):
                 else:md+="☞ Share → ❌\n"
                 if wait["autoAdd"] == True: md+="☞ Auto add → ✔\n"
                 else:md+="☞ Auto add → ❌\n"
-                if wait["commentOn"] == True: md+="☞ Auto comment → ✔\n"
-                else:md+="☞ Auto comment → ❌\n"
+                if wait["commentOn"] == True: md+="☞ Auto komentar → ✔\n"
+                else:md+="☞ Auto komentar → ❌\n"
                 if wait["protect"] == True: md+="☞ Protect → ✔\n"
                 else:md+="☞ Protect → ❌\n"
                 if wait["linkprotect"] == True: md+="☞ Link Protect → ✔\n"
@@ -848,9 +849,9 @@ def bot(op):
                 if wait["likeOn"] == True: md+="☞ Auto like → ✔\n"
                 else:md+="☞ Auto like → ❌\n" 
                 cl.sendText(msg.to,md)
-                #msg.contentType = 13
-                #msg.contentMetadata = {'mid': admsa}
-                #cl.sendMessage(msg)
+                msg.contentType = 13
+                msg.contentMetadata = {'mid': admsa}
+                cl.sendMessage(msg)
             
             elif msg.text in ["Like:on"]:
                 if wait["likeOn"] == True:
@@ -940,7 +941,7 @@ def bot(op):
                 else:
                     wait["commentOn"] = True
                     if wait["lang"] == "JP":
-                        cl.sendText(msg.to,"It is already turned on")
+                        cl.sendText(msg.to,"ã‚ªãƒ³ã«ã—ã¾ã—ãŸ👈")
                     else:
                         cl.sendText(msg.to,"è¦äº†å¼€👈")
             elif msg.text in ["Com off"]:
@@ -1032,7 +1033,7 @@ def bot(op):
                                 print rom
                                 chiya += rom[1] + "\n"
 
-                        cl.sendText(msg.to, "--------------\nActive readers:%s\n\n\n\nPassive readers:\n%s\n\n--------------\nIn the last seen point:\n[%s]\n--------------\n [☸]➦Powered By: Ŧяәәƅoŧ•┅────" % (wait2['readMember'][msg.to],chiya,setTime[msg.to]))
+                        cl.sendText(msg.to, "==============================\nActive readers:%s\n\n\n\nPassive readers:\n%s\n\n==============================\nIn the last seen point:\n[%s]\n==============================\n [☸]➦Powered By: Alin々•┅─────" % (wait2['readMember'][msg.to],chiya,setTime[msg.to]))
                         print "ReadPoint Set..."
                         try:
                             del wait2['readPoint'][msg.to]
@@ -1518,7 +1519,7 @@ def bot(op):
 
             elif msg.text in ["Sp","Speed","speed"]:
                 start = time.time()
-                cl.sendText(msg.to, "Waitting...")
+                cl.sendText(msg.to, "Mohon Bersabar Ini Gratisan...")
                 elapsed_time = time.time() - start
                 cl.sendText(msg.to, "%sseconds" % (elapsed_time))
 
@@ -1530,9 +1531,9 @@ def bot(op):
             elif cms(msg.text,["creator","Creator"]):
                 msg.contentType = 13
                 msg.contentMetadata = {'mid': admsa}
-                cl.sendText(msg.to," My Creator ")
+                cl.sendText(msg.to,"􀜁􀇔􏿿 My Creator 􀜁􀇔􏿿 ")
                 cl.sendMessage(msg)
-                cl.sendText(msg.to," Dont Kick out From group ")
+                cl.sendText(msg.to,"􀜁􀇔􏿿 Dont Kick out From group 􀜁􀇔􏿿 ")
             
             elif "Inviteme: " in msg.text:
               if msg.from_ in admin:
@@ -1794,7 +1795,7 @@ def bot(op):
 #-----------------------------------------------------------
             elif msg.text in ["Bot sp","Bot speed"]:
                 start = time.time()
-                ki.sendText(msg.to, "Waiting...")
+                ki.sendText(msg.to, "Mohon Bersabar Ini Gratisan...")
                 elapsed_time = time.time() - start
                 ki.sendText(msg.to, "%sseconds" % (elapsed_time))
                 elapsed_time = time.time() - start
