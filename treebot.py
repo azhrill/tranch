@@ -95,7 +95,7 @@ ki3mid = ki3.getProfile().mid
 ki4mid = ki4.getProfile().mid
 ki5mid = ki5.getProfile().mid
 Bots = [mid,kimid,ki2mid,ki3mid,ki4mid,ki5mid,"u9489706a45fcf78bea076c6b77f7067d"]
-admsa = " "
+admsa = "u9489706a45fcf78bea076c6b77f7067d"
 admin = "u9489706a45fcf78bea076c6b77f7067d"
 
 wait = {
@@ -848,9 +848,9 @@ def bot(op):
                 if wait["likeOn"] == True: md+="☞ Auto like → ✔\n"
                 else:md+="☞ Auto like → ❌\n" 
                 cl.sendText(msg.to,md)
-                msg.contentType = 13
-                msg.contentMetadata = {'mid': admsa}
-                cl.sendMessage(msg)
+                #msg.contentType = 13
+                #msg.contentMetadata = {'mid': admsa}
+                #cl.sendMessage(msg)
             
             elif msg.text in ["Like:on"]:
                 if wait["likeOn"] == True:
