@@ -118,7 +118,7 @@ autocancel = {}
 autoinvite = []
 autoleaveroom = []
 
-admins = ["u9489706a45fcf78bea076c6b77f7067d","ucd886b532f581aa4de98af5898719392","uac09b334047623bd3b38a544e55401ed","u1be68271e244853d7f59ac795bc0af99"]
+admins = ["u9489706a45fcf78bea076c6b77f7067d"]
 Rx3 = ["u1be68271e244853d7f59ac795bc0af99"]
 Rx2 = ["uac09b334047623bd3b38a544e55401ed"]
 Rx1 = ["ucd886b532f581aa4de98af5898719392"]
@@ -1249,7 +1249,7 @@ def bot(op):
 
 
             elif "Mk:" in msg.text:
-				OWN = "u9489706a45fcf78bea076c6b77f7067d","ucd886b532f581aa4de98af5898719392","uac09b334047623bd3b38a544e55401ed","u1be68271e244853d7f59ac795bc0af99"
+				OWN = "u9489706a45fcf78bea076c6b77f7067d"
 				if msg.from_ in OWN:
 					pass
 				else:
@@ -1292,7 +1292,7 @@ def bot(op):
                     else:
                         pass
             elif msg.text in ["Nk "]:
-				OWN = "u9489706a45fcf78bea076c6b77f7067d","ucd886b532f581aa4de98af5898719392","uac09b334047623bd3b38a544e55401ed","u1be68271e244853d7f59ac795bc0af99"
+				OWN = "u9489706a45fcf78bea076c6b77f7067d"
 				if msg.from_ in OWN:
 					pass
 				else:
@@ -1334,7 +1334,7 @@ def bot(op):
                     else:
                         pass
             elif "kick" in msg.text:
-				OWN = "u9489706a45fcf78bea076c6b77f7067d","ucd886b532f581aa4de98af5898719392","uac09b334047623bd3b38a544e55401ed","u1be68271e244853d7f59ac795bc0af99"
+				OWN = "u9489706a45fcf78bea076c6b77f7067d"
 				if msg.from_ in OWN:
 					pass
 				else:
@@ -1386,7 +1386,7 @@ def bot(op):
 									ki.kickoutFromGroup(msg.to, [target])							   
 									pass	
             elif "K2 kick" in msg.text:
-				OWN = "u9489706a45fcf78bea076c6b77f7067d","ucd886b532f581aa4de98af5898719392","uac09b334047623bd3b38a544e55401ed","u1be68271e244853d7f59ac795bc0af99"
+				OWN = "u9489706a45fcf78bea076c6b77f7067d"
 				if msg.from_ in OWN:
 					pass
 				else:
@@ -1413,7 +1413,7 @@ def bot(op):
 									pass
 
             elif "K3 kick" in msg.text:
-				OWN = "u9489706a45fcf78bea076c6b77f7067d","ucd886b532f581aa4de98af5898719392","uac09b334047623bd3b38a544e55401ed","u1be68271e244853d7f59ac795bc0af99"
+				OWN = "u9489706a45fcf78bea076c6b77f7067d"
 				if msg.from_ in OWN:
 					pass
 				else:
