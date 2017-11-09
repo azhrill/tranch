@@ -31,7 +31,7 @@ wait = {
     'autoAdd':True,
     'message':" ",
     "lang":"JP",
-    "comment":"Auto like",
+    "comment":"Auto Like",
     "commentOn":True,
     "likeOn":True,
     "commentBlack":{},
