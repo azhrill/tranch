@@ -23,26 +23,30 @@ Dmid = ks.getProfile().mid
 Bots=[mid,Amid,Bmid,Cmid,Dmid]
 admin=[" "]
 wait = {
-    'contact':True,
+    'contact':False,
     'autoJoin':True,
-    'autoCancel':{"on":True,"members":1},
+    'autoCancel':{"on":False,"members":20},
     'leaveRoom':True,
-    'timeline':True,
+    'timeline':False,
     'autoAdd':True,
-    'message':"Thanks for add me",
+    'message':" ",
     "lang":"JP",
-    "comment":"Thanks for add me",
+    "comment":"Auto Like",
     "commentOn":False,
+    "likeOn":False,
     "commentBlack":{},
     "wblack":False,
     "dblack":False,
     "clock":False,
+    "cNames":"",
     "blacklist":{},
     "wblacklist":False,
     "dblacklist":False,
-    "protectionOn":True,
-    "atjointicket":False
-    }
+    "protect":True,
+    "cancelprotect":False,
+    "inviteprotect":False,
+    "linkprotect":False,
+}
 
 wait2 = {
     'readPoint':{},
