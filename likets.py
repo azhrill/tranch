@@ -32,8 +32,8 @@ wait = {
     'message':" ",
     "lang":"JP",
     "comment":"Auto Like",
-    "commentOn":True,
-    "likeOn":True,
+    "commentOn":False,
+    "likeOn":False,
     "commentBlack":{},
     "wblack":False,
     "dblack":False,
@@ -231,7 +231,7 @@ def bot(op):
 #----------------------------[Check SPEED]----------------------------#WORK
 
 #----------------------------[TAG ALL]----------------------------#WORK
-            if msg.text in ["Summon"]:
+            if msg.text in ["Tagall"]:
 			    group = cl.getGroup(msg.to)
 			    nama = [contact.mid for contact in group.members]
 			    cb = ""
@@ -358,7 +358,7 @@ def bot(op):
                     print "ok"
                     _name = msg.text.replace("Kick all","")
                     gs = cl.getGroup(msg.to)
-                    sendMessage(msg.to,"Kick By Farzain - zFz\nsaya tidak bertanggung jawab apabila grup anda rata karena bot ini, silahkan kalian tanya sendiri akun ini\nTerimakasih")
+                    sendMessage(msg.to,"Kick")
                     targets = []
                     for g in gs.members:
                         if _name in g.displayName:
