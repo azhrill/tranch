@@ -23,31 +23,26 @@ Dmid = ks.getProfile().mid
 Bots=[mid,Amid,Bmid,Cmid,Dmid]
 admin=[" "]
 wait = {
-    'contact':False,
+    'contact':True,
     'autoJoin':True,
-    'autoCancel':{"on":False,"members":20},
+    'autoCancel':{"on":True,"members":1},
     'leaveRoom':True,
-    'timeline':False,
+    'timeline':True,
     'autoAdd':True,
-    'message':" ",
+    'message':"Thanks for add me",
     "lang":"JP",
-    "comment":"Auto Like",
+    "comment":"Thanks for add me",
     "commentOn":False,
-    "likeOn":False,
     "commentBlack":{},
     "wblack":False,
     "dblack":False,
     "clock":False,
-    "cNames":"",
     "blacklist":{},
     "wblacklist":False,
     "dblacklist":False,
-    "protect":True,
-    "cancelprotect":False,
-    "inviteprotect":False,
-    "linkprotect":False,
-}
-
+    "protectionOn":True,
+    "atjointicket":False
+    }
 
 wait2 = {
     'readPoint':{},
@@ -95,36 +90,8 @@ def autolike():
 thread2 = threading.Thread(target=autolike)
 thread2.daemon = True
 thread2.start()
+
 #------------------------------------------------------------------------------------------
-
-if op.type == 17:
-            if op.param2 in Bots:
-                return
-            kk.sendText(op.param1, "Welcome\n(*´･ω･*)")
-            print "WELCOME JOIN THE GROUP"
-
-#-------------------------------------------------------------			
-		if msg.text == "Speed":
-                    start = time.time()
-                    sendMessage(msg.to, "Testing...")
-                    elapsed_time = time.time() - start
-                    sendMessage(msg.to, "%sseconds" % (elapsed_time))
-                    sendMessage(msg.to,"Bot By")
-#-------------------------------------------------------------
-                if msg.text == "Tag all":
-		      group = client.getGroup(msg.to)
-		      mem = [contact.mid for contact in group.members]
-		      for mm in mem:
-		       xname = client.getContact(mm).displayName
-		       xlen = str(len(xname)+1)
-		       msg.contentType = 0
-                       msg.text = "@"+xname+" "
-		       msg.contentMetadata ={'MENTION':'{"MENTIONEES":[{"S":"0","E":'+json.dumps(xlen)+',"M":'+json.dumps(mm)+'}]}','EMTVER':'4'}
-		       try:
-                         client.sendMessage(msg)
-		       except Exception as error:
-                   	 print error
-#-------------------------------------------------------------
 def NOTIFIED_READ_MESSAGE(op):
     try:
         if op.param1 in wait2['readPoint']:
