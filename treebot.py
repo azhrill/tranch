@@ -692,7 +692,7 @@ def bot(op):
                     else:
                         cl.sendText(msg.to,"Already off")
                 else:
-                    wait["linkprotect"] = False:
+                    wait["linkprotect"] = False
                     if wait["lang"] == "JP":
                         cl.sendText(msg.to,"Protect QR off 􀜁􀇔􏿿")
                     else:
