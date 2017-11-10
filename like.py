@@ -95,35 +95,6 @@ def autolike():
 thread2 = threading.Thread(target=autolike)
 thread2.daemon = True
 thread2.start()
-#------------------------------------------------------------------------------------------
-
-if op.type == 17:
-            if op.param2 in Bots:
-                return
-            kk.sendText(op.param1, "Welcome\n(*´･ω･*)")
-            print "WELCOME JOIN THE GROUP"
-
-#-------------------------------------------------------------			
-		if msg.text == "Speed":
-                    start = time.time()
-                    sendMessage(msg.to, "Testing...")
-                    elapsed_time = time.time() - start
-                    sendMessage(msg.to, "%sseconds" % (elapsed_time))
-                    sendMessage(msg.to,"Bot By")
-#-------------------------------------------------------------
-                if msg.text == "Tag all":
-		      group = client.getGroup(msg.to)
-		      mem = [contact.mid for contact in group.members]
-		      for mm in mem:
-		       xname = client.getContact(mm).displayName
-		       xlen = str(len(xname)+1)
-		       msg.contentType = 0
-                       msg.text = "@"+xname+" "
-		       msg.contentMetadata ={'MENTION':'{"MENTIONEES":[{"S":"0","E":'+json.dumps(xlen)+',"M":'+json.dumps(mm)+'}]}','EMTVER':'4'}
-		       try:
-                         client.sendMessage(msg)
-		       except Exception as error:
-                   	 print error
 #-------------------------------------------------------------
 def NOTIFIED_READ_MESSAGE(op):
     try:
