@@ -42,7 +42,7 @@ wait = {
     "blacklist":{},
     "wblacklist":False,
     "dblacklist":False,
-    "protect":True,
+    "protect":False,
     "cancelprotect":False,
     "inviteprotect":False,
     "linkprotect":False,
