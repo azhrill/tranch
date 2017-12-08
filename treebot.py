@@ -115,7 +115,7 @@ ki2mid = ki2.getProfile().mid
 ki3mid = ki3.getProfile().mid
 ki4mid = ki4.getProfile().mid
 ki5mid = ki5.getProfile().mid
-Bots = [mid,kimid,ki2mid,ki3mid,ki4mid,ki5mid,"u29c6532cc49a120f101a3c2c0ab4556f]
+Bots = [mid,kimid,ki2mid,ki3mid,ki4mid,ki5mid,"u29c6532cc49a120f101a3c2c0ab4556f"]
 admsa = "u29c6532cc49a120f101a3c2c0ab4556f"
 admin = "u29c6532cc49a120f101a3c2c0ab4556f"
 
