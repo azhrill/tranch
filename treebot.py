@@ -8,7 +8,23 @@ import time,random,sys,json,codecs,threading,glob,requests,urllib
 cl = LINETCR.LINE()
 cl.login(qr=True)
 cl.loginResult()
-ki = ki2 = ki3 = ki4 = ki5 = cl 
+
+
+ki = LINETCR.LINE() 
+ki.login(qr=True) 
+ki.loginResult() 
+
+kk = LINETCR.LINE() 
+kk.login(qr=True) 
+kk.loginResult() 
+
+kc = LINETCR.LINE() 
+kc.login(qr=True) 
+kc.loginResult() 
+
+ks = LINETCR.LINE() 
+ks.login(qr=True) 
+ks.loginResult()
 
 print u"login success"
 reload(sys)
@@ -99,9 +115,9 @@ ki2mid = ki2.getProfile().mid
 ki3mid = ki3.getProfile().mid
 ki4mid = ki4.getProfile().mid
 ki5mid = ki5.getProfile().mid
-Bots = [mid,kimid,ki2mid,ki3mid,ki4mid,ki5mid,"u9489706a45fcf78bea076c6b77f7067d"]
-admsa = "u9489706a45fcf78bea076c6b77f7067d"
-admin = "u9489706a45fcf78bea076c6b77f7067d"
+Bots = [mid,kimid,ki2mid,ki3mid,ki4mid,ki5mid,"u29c6532cc49a120f101a3c2c0ab4556f]
+admsa = "u29c6532cc49a120f101a3c2c0ab4556f"
+admin = "u29c6532cc49a120f101a3c2c0ab4556f"
 
 wait = {
     'contact':False,
